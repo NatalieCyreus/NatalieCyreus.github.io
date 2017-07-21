@@ -11,6 +11,7 @@ $('.hamburger').on('click', function(){
   });
 
 
+
 /***************************** BIO SECTION ******************************/
 var bio = {
     "name": "Natalie Serruya-Cyreus",
@@ -65,7 +66,7 @@ var bio = {
         var formattedLocation = HTMLlocation.replace("%data%", locationNY);
 
         var HTMLhamburgerMenu = '<div href="#" class="hamburger"><i class="right"></i></div>';
-        var HTMLHeaderMenu = formattedEmail + formattedGithub + formattedLocation;
+        var HTMLHeaderMenu = formattedLocation + formattedGithub  + formattedEmail ;
         $(".menu").append(HTMLHeaderMenu);
         $(".hamburger").append(HTMLhamburgerMenu);
         $(".navbar").append(formattedImage);

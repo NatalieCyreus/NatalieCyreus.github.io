@@ -14,18 +14,21 @@ replace the %data% placeholder text you see in them.
 */
 
 
-var HTMLheaderName = '<h1 id="name">%data%</h1>';
-var HTMLheaderRole = '<span class="role-text">%data%</span><hr>';
+var HTMLheaderName = '<div id="name"><h1 >%data%</h1></div>';
+var HTMLheaderRole = '<div id="titleHeader">%data%</div><hr class="navHeader">';
 
-var HTMLcontactGeneric = '<div class="flex-item"><span class="contact-text-bold">%contact%</span><span class="contact-text">%data%</span></div>';
+var HTMLcontactGeneric = '<div class="flex-item"><span class="contact-text">%contact%</span><span class="contact-text">%data%</span></div>';
 
-var HTMLmobile = '<a href="#"><li class="flex-item"><span class="contact-text-bold">phone</span><span class="contact-text">%data%</span></li></a>';
-var HTMLemail = '<a href="#"><li class="flex-item"><span class="contact-text-bold zocial-email"><span class="contact-text">%data%</span></li></a>';
-var HTMLtwitter = '<li class="flex-item"><span class="contact-text-bold">Twitter<span class="contact-text">%data%</span></li>';
-var HTMLgithub = '<a href="https://github.com/NatalieCyreus"><li class="flex-item"><span class="contact-text-bold zocial-github"></span><span class="contact-text">%data%</span></li></a>';
-var HTMLblog = '<a href="https://thecookingswede.com"><li class="flex-item"><span class="contact-text-bold">Blog</span><span class="contact-text">%data%</span></li></a>';
-var HTMLlocation = '<a href="#"><li class="flex-item"><span class="contact-text-bold"></span></span><span class="contact-text">%data%</span></li></a>';
-var HTMLskype = '<a href="#"><li class="flex-item"><span class="contact-text-bold">Skype</span></span><span class="contact-text">%data%</span></li><a>';
+var HTMLmobile = '<a href="#"><li class="flex-item"><span class="contact-text">phone</span><span class="contact-text">%data%</span></li></a>';
+var HTMLemail = '<a href="#"><li class="contact-text zocial-email">%data%</li></a>';
+var HTMLtwitter = '<li class="flex-item"><span class="contact-text">Twitter<span class="contact-text">%data%</span></li>';
+
+var HTMLgithub = '<a href="https://github.com/NatalieCyreus"><li class="contact-text zocial-github">%data%</li></a>';
+
+
+var HTMLblog = '<a href="https://thecookingswede.com"><li class="flex-item"><span class="contact-text">Blog</span><span class="contact-text">%data%</span></li></a>';
+var HTMLlocation = '<a href="#"><li class="contact-text">%data%</li></a>';
+var HTMLskype = '<a href="#"><li class="flex-item"><span class="contact-text">Skype</span></span><span class="contact-text">%data%</span></li><a>';
 
 var HTMLbioPic = '<img src="%data%" class="bioPic ">';
 var HTMLwelcomeMsg = '<span class="welcome-message">%data%</span>';
@@ -55,13 +58,13 @@ var HTMLVolunteeringDescription = '<p><br>%data%</p>';
 
 var HTMLschoolStart = '<div class="education-entry"></div>';
 var HTMLschoolName = '<a href="#">%data%';
-var HTMLschoolDegree = '<a href="#" class="school-text">%data%</a>';
+var HTMLschoolDegree = '<a href="#" id="titleHeader>%data%</a>';
 var HTMLschoolDates = '<div class="date-text">%data%</div>';
 var HTMLschoolLocation = '<div class="location-text">%data%</div>';
 var HTMLschoolMajor = '<em class="school"><br>Major: %data%</em>';
 
 var HTMLonlineClasses = '<h3 class="h3onlineSchool">Online Classes</h3>';
-var HTMLonlineTitle = '<a href="#" class="school-text">%data%';
+var HTMLonlineTitle = '<a href="#" id="titleHeader>%data%';
 var HTMLonlineSchool = ' <a href="#" ">%data%</a>';
 var HTMLonlineDates = '<div class="date-text">%data%</div>';
 var HTMLonlineURL = '<br><a href="#" class="online-link">%data%</a>';
