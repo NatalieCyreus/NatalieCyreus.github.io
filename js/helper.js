@@ -12,28 +12,30 @@ Cameron Pittman
 These are HTML strings. As part of the course, you'll be using JavaScript functions
 replace the %data% placeholder text you see in them.
 */
+
+
 var HTMLheaderName = '<h1 id="name">%data%</h1>';
 var HTMLheaderRole = '<span class="role-text">%data%</span><hr>';
 
-var HTMLcontactGeneric = '<li class="flex-item"><span class="contact-text">%contact%</span><span class="contact-text">%data%</span></li>';
-var HTMLmobile = '<li class="flex-item"><span class="contact-text"><span class="zocial-call"></span></span><span class="contact-text">%data%</span></li>';
-var HTMLemail = '<li class="flex-item"><span class="contact-text"><span class="zocial-email"></span><span class="contact-text">%data%</span></li>';
-var HTMLtwitter = '<li class="flex-item"><span class="contact-text"><span class="zocial-twitter"></span><span class="contact-text">%data%</span></li>';
-var HTMLgithub = '<li class="flex-item"><span class="contact-text"><span class="zocial-github"></span></span><span class="contact-text">%data%</span></li>';
-var HTMLblog = '<a href="https://thecookingswede.com"><li class="flex-item"><span class="contact-text"></span><span class="contact-text">%data%</span></li></a>';
-var HTMLlocation = '<li class="flex-item"><span class="contact-text">location</span></span><span class="contact-text">%data%</span></li>';
-var HTMLskype = '<li class="flex-item"><span class="contact-text">Skype</span></span><span class="contact-text">%data%</span></li>';
+var HTMLcontactGeneric = '<div class="flex-item"><span class="contact-text-bold">%contact%</span><span class="contact-text">%data%</span></div>';
 
-var HTMLbioPic = '<img src="%data%" class="bioPic">';
+var HTMLmobile = '<a href="#"><li class="flex-item"><span class="contact-text-bold">phone</span><span class="contact-text">%data%</span></li></a>';
+var HTMLemail = '<a href="#"><li class="flex-item"><span class="contact-text-bold zocial-email"><span class="contact-text">%data%</span></li></a>';
+var HTMLtwitter = '<li class="flex-item"><span class="contact-text-bold">Twitter<span class="contact-text">%data%</span></li>';
+var HTMLgithub = '<a href="https://github.com/NatalieCyreus"><li class="flex-item"><span class="contact-text-bold zocial-github"></span><span class="contact-text">%data%</span></li></a>';
+var HTMLblog = '<a href="https://thecookingswede.com"><li class="flex-item"><span class="contact-text-bold">Blog</span><span class="contact-text">%data%</span></li></a>';
+var HTMLlocation = '<a href="#"><li class="flex-item"><span class="contact-text-bold"></span></span><span class="contact-text">%data%</span></li></a>';
+var HTMLskype = '<a href="#"><li class="flex-item"><span class="contact-text-bold">Skype</span></span><span class="contact-text">%data%</span></li><a>';
+
+var HTMLbioPic = '<img src="%data%" class="bioPic ">';
 var HTMLwelcomeMsg = '<span class="welcome-message">%data%</span>';
 
-var HTMLskillsStart = '<h3 id="skills-h3">Skills at a Glance:</h3><ul id="skills" class="flex-column"></ul>';
-var HTMLskills =
- '<li class="flex-item"><span class="skills-text">%data%</span></li>';
+var HTMLskillsStart = '<div class="skills-entry"></div>';
+var HTMLskills ='<div class="role-text">%data%</div>';
 
 var HTMLworkStart = '<div class="work-entry"></div>';
 var HTMLworkEmployer = '<a href="https://spinviewglobal.com/">%data%</a>';
-var HTMLworkTitle = '<a href="#" > %data%</a>';
+var HTMLworkTitle = '<div id="titleHeader"> %data%</div>';
 var HTMLworkDates = '<div class="date-text">%data%</div>';
 var HTMLworkLocation = '<div class="location-text">%data%</div>';
 var HTMLworkDescription = '<p><br>%data%</p>';
@@ -42,11 +44,11 @@ var HTMLprojectStart = '<div class="project-entry"></div>';
 var HTMLprojectTitle = '<a href="#">%data%</a>';
 var HTMLprojectDates = '<div class="date-text">%data%</div>';
 var HTMLprojectDescription = '<p><br>%data%</p>';
-var HTMLprojectImage = '<img class="projectImg animation-element slide-left" src="%data%">';
+var HTMLprojectImage = '<img class="img-responsive animation-element slide-left" src="%data%">';
 
 
 var HTMLVolunteeringStart = '<div class="volunteering-entry"></div>';
-var HTMLVolunteeringTitle = '<a href="#">%data%</a>';
+var HTMLVolunteeringTitle = '<div id="titleHeader">%data%</div>';
 var HTMLVolunteeringDates = '<div class="date-text">%data%</div>';
 var HTMLVolunteeringDescription = '<p><br>%data%</p>';
 
@@ -58,7 +60,7 @@ var HTMLschoolDates = '<div class="date-text">%data%</div>';
 var HTMLschoolLocation = '<div class="location-text">%data%</div>';
 var HTMLschoolMajor = '<em class="school"><br>Major: %data%</em>';
 
-var HTMLonlineClasses = '<h3>Online Classes</h3>';
+var HTMLonlineClasses = '<h3 class="h3onlineSchool">Online Classes</h3>';
 var HTMLonlineTitle = '<a href="#" class="school-text">%data%';
 var HTMLonlineSchool = ' <a href="#" ">%data%</a>';
 var HTMLonlineDates = '<div class="date-text">%data%</div>';

@@ -24,6 +24,8 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
 
   <!-- Load the page styles. -->
   <link href="css/style.css" rel="stylesheet">
+  <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+  <link href="bootstrap/js/bootstrap.js" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=EB+Garamond" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto:700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Abel|Amatic+SC|Raleway:100,200,300,400,500,600,700,800,900" rel="stylesheet">
@@ -45,38 +47,58 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     resume below. You can pretty easily figure out what each section will
     display by looking at the id or at what's written between the <h2> tags.
     -->
-    <div id="header" class="center-content clear-fix">
-      <ul id="topContacts" class="flex-box"></ul>
+
+
+    <div class="row">
+      <div class="col-sm-2 navbar  navbar-fixed-top">
+        <div id="lets-connect">
+          <h2 class="whiteText"><a href="#" class="hamburger"></a><ul class="menu"></ul></h2>
+        </div>
+      </div>
+      </div>
+
+  <div class="container">
+
+    <div class="row">
+      <div class="col-sm-4">
+      </div>
+      <div class="col-sm-8 grey2 " id="workExperience">
+        <h2>Work Experience<hr class="hrHeader"></h2>
+      </div>
     </div>
 
-    <div style="clear: both;"></div>
-    <div id="workExperience" class="gray">
-      <h2>Work Experience</h2>
-    </div>
-
-    <div id="projects">
-      <h2>Projects</h2>
-    </div>
-
-    <div id="education" class="gray">
-      <h2>Education</h2>
-    </div>
-
-    <div id="volunteering">
-      <h2>Volunteering</h2>
-    </div>
-
-    <div id="mapDiv" class="gray">
-      <h2>Where I've Lived and Worked</h2>
-
-    </div>
-    <div id="lets-connect">
-      <h2 class="whiteText center-text">Let's Connect<hr></h2>
-
-        <ul id="footerContacts" class="flex-box">
-      </ul>
+    <div class="row">
+      <div class="col-sm-4">
+      </div>
+    <div id="projects" class="col-sm-8 grey">
+      <h2>Projects<hr class="hrHeader"></h2>
     </div>
   </div>
+
+  <div class="row">
+    <div class="col-sm-4">
+    </div>
+    <div id="education" class="col-sm-8 grey2 ">
+      <h2>Education<hr class="hrHeader"></h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-4">
+    </div>
+    <div class="col-sm-8 grey" id="volunteering">
+      <h2>Volunteering<hr class="hrHeader"></h2>
+    </div>
+  </div>
+
+
+  </div>
+
+
+  </div>
+
+
+
 
   <!-- "HTML is loaded by the browser in the order it appears in the file. If the JavaScript is loaded first and it is supposed to affect the HTML below it, it might not work, as the JavaScript would be loaded before the HTML it is supposed to work on. Therefore, putting JavaScript near the bottom of the HTML page is often the best strategy."
   https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/JavaScript_basics -->
@@ -136,8 +158,8 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     if(document.getElementsByClassName('flex-item').length === 0) {
       document.getElementById('topContacts').style.display = 'none';
     }
-    if(document.getElementsByTagName('h1').length === 0) {
-      document.getElementById('header').style.display = 'none';
+    if(document.getElementsByClassName('skills-entry').length === 0) {
+      document.getElementById('skills').style.display = 'none';
     }
     if(document.getElementsByClassName('work-entry').length === 0) {
       document.getElementById('workExperience').style.display = 'none';

@@ -1,9 +1,22 @@
+
+$('.hamburger').on('click', function(){
+    // // if menu is closed, slide down
+    // if ($('.menu').hasClass('open')) {
+    //   $('.menu').removeClass('open');
+    // }else {
+    //   // if menu is open, slide up
+    //     $('.menu').addClass('open');
+    //   }
+      $('.menu').toggleClass('open');
+  });
+
+
 /***************************** BIO SECTION ******************************/
 var bio = {
     "name": "Natalie Serruya-Cyreus",
     "role": "Web developer",
     "contacts": {
-        "mobile": "+1-201-658-2233",
+        "mobile": "+12016582233",
         "email": "nataliecyreus@gmail.com",
         "github": "/NatalieCyreus",
         "twitter": "xxxx.twitter.com",
@@ -11,27 +24,32 @@ var bio = {
         "blog": "thecookingswede.com",
         "skype" : "natalie.cyreus"
     },
-    "welcomeMessage": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. ",
+    "welcomeMessage": "",
     "skills": ["HTML", "CSS", "JavaScript"],
-    "biopic": "images/IMG_2922.JPG",
+    "biopic": "images/natalieImageBW.jpeg",
 
     display: function() {
 
+      for (k = 0; k < bio.skills.length; k++) {
+
+        var formattedSkill = HTMLskills.replace("%data%", bio.skills[k]);
+        $(".navbar").prepend(formattedSkill);
+      }
         var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
-        $("#header").prepend(formattedRole);
+        $(".navbar").prepend(formattedRole);
 
         var formattedName = HTMLheaderName.replace("%data%", bio.name);
-        $("#header").prepend(formattedName);
+        $(".navbar").prepend(formattedName);
+
+
+
 
         var formattedImage = HTMLbioPic.replace("%data%", bio.biopic);
-        $("#header").append(formattedImage);
+        $("#header").prepend(HTMLskillsStart);
 
-        $("#header").append(HTMLskillsStart);
+        $("#skills").append(HTMLskillsStart);
 
-        for (k = 0; k < bio.skills.length; k++) {
-          var formattedSkill = HTMLskills.replace("%data%", bio.skills[k]);
-          $("#skills").prepend(formattedSkill);
-        }
+
 
 
         var formattedWelcome = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
@@ -42,10 +60,15 @@ var bio = {
         var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
         var formattedBlog = HTMLblog.replace("%data%", bio.contacts.blog);
         var formattedPhone = HTMLmobile.replace("%data%", bio.contacts.mobile);
-        var formattedSkype = HTMLmobile.replace("%data%", bio.contacts.skype);
+        var formattedSkype = HTMLskype.replace("%data%", bio.contacts.skype);
         var locationNY = bio.contacts.location;
         var formattedLocation = HTMLlocation.replace("%data%", locationNY);
-        $("#footerContacts , #topContacts").append(formattedEmail, formattedGithub, formattedBlog, formattedPhone, formattedSkype, formattedLocation);
+
+        var HTMLhamburgerMenu = '<div href="#" class="hamburger"><i class="right"></i></div>';
+        var HTMLHeaderMenu = formattedEmail + formattedGithub + formattedLocation;
+        $(".menu").append(HTMLHeaderMenu);
+        $(".hamburger").append(HTMLhamburgerMenu);
+        $(".navbar").append(formattedImage);
 
     }
 };
@@ -90,7 +113,7 @@ work.display();
 
 var projects = {
     "projects": [{
-            "title": "First project",
+            "title": "The Cooking Swede",
             "dates": "june 2017",
             "description": "Learned javascript whiledoing it.",
             "images": ["images/computerNotes.jpeg"]
@@ -138,7 +161,7 @@ var education = {
             "name": "Södertörn University",
             "location": "Stockholm",
             "degree": "Media and communication",
-            "majors": ["#", "#"],
+            "majors": [""],
             "dates": "2013-2015",
         },
 
@@ -146,16 +169,8 @@ var education = {
             "name": "Fullstack Academy",
             "location": "New York",
             "degree": "Bootcamp Prep",
-            "majors": ["#"],
+            "majors": [""],
             "dates": "April-May 2017"
-
-        },
-        {
-            "name": "Spanish Course",
-            "location": "Buenos Aires",
-            "degree": "Spanish",
-            "majors": ["#"],
-            "dates": "August-September 2016"
 
         }
     ],
@@ -175,12 +190,12 @@ var education = {
 
     display: function() {
 
-        $("#education").append(HTMLschoolStart);
+
 
         for (var n = 0; n < education.schools.length; n++) {
 
 
-
+            $("#education").append(HTMLschoolStart);
             var formattedSchoolName = HTMLschoolName.replace("%data%", education.schools[n].name);
             $(".education-entry:last").append(formattedSchoolName);
             var formattedSchoolDegree = HTMLschoolDegree.replace("%data%", education.schools[n].degree);
@@ -197,7 +212,7 @@ var education = {
 
             for (var h = 0; h < education.schools[n].majors.length; h++) {
                 var formattedSchoolMajor = HTMLschoolMajor.replace("%data%", education.schools[n].majors[h]);
-                $(".education-entry:last").append(formattedSchoolMajor);
+
 
             }
 
@@ -216,7 +231,7 @@ var education = {
             $(".education-entry:last").append(formattedOnlineSchoolDates);
 
             var formattedOnlineSchoolUrl = HTMLonlineURL.replace("%data%", education.onlineCourses[t].url);
-            $(".education-entry:last").append(formattedOnlineSchoolUrl);
+
 
         }
 
@@ -239,7 +254,7 @@ var volunteering = {
             "title": "Board member Red Cross Flemingsberg.",
             "dates": "2014-2015",
             "role": "Red Cross",
-            "description": "I was in the board of the Flemingsberg division, as one of the most active members of the board I contributed with much knowledge of the needs from the language meetings."
+            "description": "Boardmember of the Flemingsberg division, as one of the most active members of the board I contributed with much knowledge of the needs from the language meetings."
         }
     ],
 
@@ -266,7 +281,7 @@ volunteering.display();
 
 /*************************** MAP SECTION ****************************/
 
-$("#mapDiv").append(googleMap);
+//$("#mapDiv").append(googleMap);
 
 /******************** INTERNATIONALIZE SECTION **************************/
 
