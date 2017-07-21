@@ -84,7 +84,7 @@ var work = {
             title: "Co-founder",
             location: "Stockholm, Sweden",
             dates: "2015-2017 ",
-            description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+            description: "Tech and marketing driven b2b company focused in creating, storing and sharing augmented reality."
 
         }
     ],
@@ -140,7 +140,7 @@ var projects = {
             $(".project-entry:last").append(formattedProjectDates);
 
             formattedProjectDescription = HTMLprojectDescription.replace("%data%", projects.projects[y].description);
-            $(".project-entry:last").append(formattedProjectDescription);
+            //$(".project-entry:last").append(formattedProjectDescription);
 
             for (var x = 0; x < projects.projects[y].images.length; x++) {
                 var formattedProjectImage = HTMLprojectImage.replace("%data%", projects.projects[y].images[x]);
