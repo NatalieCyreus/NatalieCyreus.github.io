@@ -121,7 +121,7 @@ var projects = {
             "title": "The Cooking Swede",
             "dates": "june 2017",
             "description": "Learned javascript whiledoing it.",
-            "images": ["images/thecookingswede.png"]
+            "images": ["images/theCookingSwede.png"]
         },
         {
             "title": "Second project",

@@ -50,7 +50,7 @@ i {
 
 .navbar {
   background: #fff;
-  height: 300px;
+  height: 320px;
 }
 
 
@@ -419,12 +419,12 @@ span {
 @media only screen and (max-width: 767px) {
 
   .navbar-fixed-top {
-    height: 150px;
+    height: 170px;
   }
 
 
   .container {
-    margin-top: 190px;
+    margin-top: 180px;
 
 
   }
@@ -474,15 +474,15 @@ span {
       height: 200px;
       background-color: #282C34;
       border-style: solid;
-      padding-left: 15px;
-      margin-top: 0px;
+      padding-left: 20px;
       margin-top: 0px;
 
   }
 
   .navbar {
     margin-bottom: 0px;
-    padding-bottom: 0px;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
   }
 
 
