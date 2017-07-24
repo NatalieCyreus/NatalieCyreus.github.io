@@ -18,12 +18,13 @@ var bio = {
     "role": "Web developer",
     "contacts": {
         "mobile": "+12016582233",
-        "email": "nataliecyreus@gmail.com",
-        "github": "/NatalieCyreus",
+        "email": " nataliecyreus@gmail.com",
+        "github": " NatalieCyreus",
         "twitter": "xxxx.twitter.com",
-        "location": "New York",
-        "blog": "thecookingswede.com",
-        "skype" : "natalie.cyreus"
+        "location": " New York",
+        "blog": " thecookingswede.com",
+        "skype" : " natalie.cyreus",
+        "linkedIn" : " NatalieCyreus"
     },
     "welcomeMessage": "",
     "skills": ["HTML", "CSS", "JavaScript"],
@@ -64,9 +65,10 @@ var bio = {
         var formattedSkype = HTMLskype.replace("%data%", bio.contacts.skype);
         var locationNY = bio.contacts.location;
         var formattedLocation = HTMLlocation.replace("%data%", locationNY);
+        var formattedLinkedIn = HTMLlinkedIn.replace("%data%", bio.contacts.linkedIn);
 
         var HTMLhamburgerMenu = '<div href="#" class="hamburger"><i class="right"></i></div>';
-        var HTMLHeaderMenu = formattedLocation + formattedGithub  + formattedEmail ;
+        var HTMLHeaderMenu = formattedLocation + formattedLinkedIn + formattedGithub  + formattedEmail ;
         $(".menu").append(HTMLHeaderMenu);
         $(".hamburger").append(HTMLhamburgerMenu);
         $(".navbar").append(formattedImage);
@@ -84,7 +86,8 @@ var work = {
             title: "Co-founder",
             location: "Stockholm, Sweden",
             dates: "2015-2017 ",
-            description: "Tech and marketing driven b2b company focused in creating, storing and sharing augmented reality."
+            description: "Tech and marketing driven b2b company focused in creating, storing and sharing augmented reality content.",
+            workpic: "images/spinview-2.png"
 
         }
     ],
@@ -98,8 +101,9 @@ var work = {
             var formattedWorkDates = HTMLworkDates.replace("%data%", work.jobs[i].dates);
             var formattedWorkLocation = HTMLworkLocation.replace("%data%", work.jobs[i].location);
             var formattedWorkDescription = HTMLworkDescription.replace("%data%", work.jobs[i].description);
+            var formattedWorkpic = HTMLworkPic.replace("%data%",work.jobs[i].workpic);
 
-            var formattedEmployerTitle = EmployerFormatted + TitleFormatted + formattedWorkDates + formattedWorkLocation + formattedWorkDescription;
+            var formattedEmployerTitle = formattedWorkpic + EmployerFormatted + TitleFormatted + formattedWorkDates + formattedWorkLocation + formattedWorkDescription;
             $(".work-entry:last").append(formattedEmployerTitle);
 
         }
@@ -117,7 +121,7 @@ var projects = {
             "title": "The Cooking Swede",
             "dates": "june 2017",
             "description": "Learned javascript whiledoing it.",
-            "images": ["images/computerNotes.jpeg"]
+            "images": ["images/thecookingswede.png"]
         },
         {
             "title": "Second project",
@@ -164,6 +168,7 @@ var education = {
             "degree": "Media and communication",
             "majors": [""],
             "dates": "2013-2015",
+            "schoolpic": "images/sh-ny-logo.png"
         },
 
         {
@@ -171,7 +176,8 @@ var education = {
             "location": "New York",
             "degree": "Bootcamp Prep",
             "majors": [""],
-            "dates": "April-May 2017"
+            "dates": "April-May 2017",
+            "schoolpic": "images/fullstack.png"
 
         }
     ],
@@ -180,13 +186,16 @@ var education = {
         "title": "Nanodegree front end",
         "school": "Udacity",
         "dates": "May 2017 - present",
-        "url": "udacity.com"
+        "url": "udacity.com",
+        "onlinePic" : "images/udacity.png"
+
     } ,
     {
         "title": "JavaScript JumpStart Online",
         "school": "Fullstack Academy",
         "dates": "March - April 2017",
-        "url": "https://www.fullstackacademy.com/"
+        "url": "https://www.fullstackacademy.com/",
+        "onlinePic" : "images/fullstack.png"
     }],
 
     display: function() {
@@ -197,8 +206,13 @@ var education = {
 
 
             $("#education").append(HTMLschoolStart);
+
+            var formattedSchoolPic = HTMLschoolPic.replace("%data%", education.schools[n].schoolpic);
+            $(".education-entry:last").append(formattedSchoolPic);
             var formattedSchoolName = HTMLschoolName.replace("%data%", education.schools[n].name);
             $(".education-entry:last").append(formattedSchoolName);
+
+
             var formattedSchoolDegree = HTMLschoolDegree.replace("%data%", education.schools[n].degree);
             $(".education-entry:last").append(formattedSchoolDegree);
 
@@ -207,6 +221,8 @@ var education = {
 
             var formattedSchoolLocation = HTMLschoolLocation.replace("%data%", education.schools[n].location);
             $(".education-entry:last").append(formattedSchoolLocation);
+
+
 
 
 
@@ -221,6 +237,9 @@ var education = {
             $("#education").append(HTMLonlineClasses);
         for (var t = 0; t < education.onlineCourses.length; t++) {
             $("#education").append(HTMLschoolStart);
+
+            var formattedOnlinePic = HTMLonlinePic.replace("%data%", education.onlineCourses[t].onlinePic);
+            $(".education-entry:last").append(formattedOnlinePic);
 
             var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[t].school);
             $(".education-entry:last").append(formattedOnlineSchool);

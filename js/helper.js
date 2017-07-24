@@ -23,6 +23,9 @@ var HTMLmobile = '<a href="#"><li class="flex-item"><span class="contact-text">p
 var HTMLemail = '<a href="#"><li class="contact-text zocial-email">%data%</li></a>';
 var HTMLtwitter = '<li class="flex-item"><span class="contact-text">Twitter<span class="contact-text">%data%</span></li>';
 
+
+var HTMLlinkedIn = '<a href="https://www.linkedin.com/in/natalie-cyreus-ba5b04a5/"><li class="contact-text zocial-linkedin">%data%</li></a>';
+
 var HTMLgithub = '<a href="https://github.com/NatalieCyreus"><li class="contact-text zocial-github">%data%</li></a>';
 
 
@@ -42,32 +45,35 @@ var HTMLworkTitle = '<div id="titleHeader"> %data%</div>';
 var HTMLworkDates = '<div class="date-text">%data%</div>';
 var HTMLworkLocation = '<div class="location-text">%data%</div>';
 var HTMLworkDescription = '<p><br>%data%</p>';
+var HTMLworkPic = '<img src="%data%" class="img-responsive animation-element slide-left">';
 
 var HTMLprojectStart = '<div class="project-entry"></div>';
 var HTMLprojectTitle = '<a href="#">%data%</a>';
 var HTMLprojectDates = '<div class="date-text">%data%</div>';
 var HTMLprojectDescription = '<p><br>%data%</p>';
-var HTMLprojectImage = '<img class="img-responsive animation-element slide-left" src="%data%">';
+var HTMLprojectImage = '<img class="img-responsive animation-element slide-left" src="%data%"><hr>';
 
 
 var HTMLVolunteeringStart = '<div class="volunteering-entry"></div>';
 var HTMLVolunteeringTitle = '<div id="titleHeader">%data%</div>';
 var HTMLVolunteeringDates = '<div class="date-text">%data%</div>';
-var HTMLVolunteeringDescription = '<p><br>%data%</p>';
+var HTMLVolunteeringDescription = '<p><br>%data%</p><br><hr>';
 
 
 var HTMLschoolStart = '<div class="education-entry"></div>';
 var HTMLschoolName = '<a href="#">%data%</a>';
 var HTMLschoolDegree = '<a href="#" id="titleHeader">%data%</a>';
 var HTMLschoolDates = '<div class="date-text">%data%</div>';
-var HTMLschoolLocation = '<div class="location-text">%data%</div>';
+var HTMLschoolLocation = '<div class="location-text">%data%</div><br><hr>';
 var HTMLschoolMajor = '<em class="school"><br>Major: %data%</em>';
+var HTMLschoolPic = '<img src="%data%" class="img-responsive animation-element slide-left">';
 
 var HTMLonlineClasses = '<h3 class="h3onlineSchool">Online Classes</h3>';
-var HTMLonlineTitle = '<a href="#" id="titleHeader>%data%';
-var HTMLonlineSchool = ' <a href="#" ">%data%</a>';
-var HTMLonlineDates = '<div class="date-text">%data%</div>';
+var HTMLonlineTitle = '<a href="#" id="titleHeader">%data%</a>';
+var HTMLonlineSchool = ' <a href="#">%data%</a>';
+var HTMLonlineDates = '<div class="date-text">%data%</div><br><hr>';
 var HTMLonlineURL = '<br><a href="#" class="online-link">%data%</a>';
+var HTMLonlinePic = '<img src="%data%" class="img-responsive animation-element slide-left">';
 
 var internationalizeButton = '<button class="interButton">Internationalize</button>';
 var googleMap = '<div id="map"></div>';

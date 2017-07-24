@@ -1,15 +1,18 @@
 @import url(http://weloveiconfonts.com/api/?family=zocial);
 
+@import url('https://fonts.googleapis.com/css?family=Share+Tech+Mono');
+
+
 /* zocial */
 [class*="zocial-"]:before {
   font-family: 'zocial', sans-serif;
-  color: #000;
+  color: #C678DD;
 
 }
 #main {
-  max-width: 900px;
-
+  max-width: 1000px;
 }
+
 
 body,
 div,
@@ -33,16 +36,23 @@ i {
     padding: 3px;
 }
 
+
 .right {
     transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
 }
 
+.col-sm-8 {
+  border-style: double;
+  margin-top: 10px;
+  border-width: 7px;
+}
 
 .navbar {
   background: #fff;
   height: 300px;
 }
+
 
 .clear-fix {
   overflow: auto;
@@ -73,7 +83,7 @@ h1 {
 
 .role-text  {
     font-size: 11px;
-    color: #000;
+    color: #D19A66;
     font-family: 'Raleway', serif;
     letter-spacing: 2.5px;
     font-weight: bold;
@@ -84,11 +94,9 @@ h1 {
 
 
 .contact-text {
-    font-size: 10px;
-    color: #000;
-    font-family: 'Raleway', serif;
-    letter-spacing: 1.5px;
-    font-weight: bold;
+    font-size: 14px;
+    color: #98C379;
+    font-family: 'Share Tech Mono', monospace;
     text-transform: uppercase;
     margin-top: 2px;
     text-align: left;
@@ -96,13 +104,13 @@ h1 {
 }
 
 h2 {
-  font-size: 15px;
+  font-size: 20px;
   color: #000;
-  font-family: 'Raleway', serif;
+  font-family: 'Share Tech Mono', monospace;
   letter-spacing: 2.5px;
   font-weight: bold;
   text-transform: uppercase;
-  text-align: left;
+  text-align: center;
   margin-top: 5px;
 }
 
@@ -118,12 +126,14 @@ h3 {
   line-height: 1.5;
   margin-top: 15px;
   margin-bottom: 15px;
+  text-align: center;
+  font-family: 'Share Tech Mono', monospace;
 
 }
 
 
 .hrHeader {
-  margin-left: 0px;
+
   width: 300px;
 }
 
@@ -176,6 +186,7 @@ p {
   line-height: 24px;
   font-weight: 200;
   padding-bottom: 20px;
+  font-family: 'Share Tech Mono', monospace;
 }
 
 a {
@@ -414,6 +425,8 @@ span {
 
   .container {
     margin-top: 190px;
+
+
   }
 
   .bioPic {
@@ -431,9 +444,14 @@ span {
         cursor: pointer;
         padding: 0px;
         padding-top: 0px;
+        margin-top: 0px;
         display: block;
-        margin-right: 0px;
+        background-color: #fff;
     }
+
+
+
+
   .menu {
         height: 0;
         overflow: hidden;
@@ -443,18 +461,21 @@ span {
     .contact-text-bold {
       font-size: 13px;
       line-height: 2.5;
+
     }
 
     .contact-text {
       font-size: 13px;
       line-height: 2.5;
+
     }
 
     .open {
-      height: 110px;
-      background-color: #FAFAFA;
+      height: 200px;
+      background-color: #282C34;
       border-style: solid;
       padding-left: 15px;
+      margin-top: 0px;
       margin-top: 0px;
 
   }
