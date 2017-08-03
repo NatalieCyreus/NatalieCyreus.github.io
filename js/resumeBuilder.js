@@ -19,12 +19,12 @@ var bio = {
     "contacts": {
         "mobile": "+12016582233",
         "email": " nataliecyreus@gmail.com",
-        "github": " NatalieCyreus",
+        "github": " github",
         "twitter": "xxxx.twitter.com",
         "location": " New York",
         "blog": " thecookingswede.com",
-        "skype" : " natalie.cyreus",
-        "linkedIn" : " NatalieCyreus"
+        "skype" : " skype",
+        "linkedIn" : " LinkedIn"
     },
     "welcomeMessage": "",
     "skills": ["HTML", "CSS", "JavaScript"],
@@ -87,7 +87,7 @@ var work = {
             location: "Stockholm, Sweden",
             dates: "2015-2017 ",
             description: "Tech and marketing driven b2b company focused in creating, storing and sharing augmented reality content.",
-            workpic: "images/spinview-2.png"
+            workpic: "images/SpinviewBG-Notext-LinkedIn.png"
 
         }
     ],
@@ -119,15 +119,10 @@ work.display();
 var projects = {
     "projects": [{
             "title": "The Cooking Swede",
+            "link": "http://thecookingswede.com/",
             "dates": "june 2017",
             "description": "Learned javascript whiledoing it.",
-            "images": ["images/theCookingSwede.png"]
-        },
-        {
-            "title": "Second project",
-            "dates": "june 2017",
-            "description": "Learned javascript whiledoing it.",
-            "images": ["images/desk-photo.jpeg"]
+            "images": ["images/thecookingSwede-2.png"]
         }
     ],
 
@@ -138,7 +133,8 @@ var projects = {
             $("#projects").append(HTMLprojectStart);
 
             var formattedProjectTitle = HTMLprojectTitle.replace("%data%", projects.projects[y].title);
-            $(".project-entry:last").append(formattedProjectTitle);
+            var formattedProjectTitleLink = formattedProjectTitle.replace("%#%", projects.projects[y].link);
+            $(".project-entry:last").append(formattedProjectTitleLink);
 
             formattedProjectDates = HTMLprojectDates.replace("%data%", projects.projects[y].dates);
             $(".project-entry:last").append(formattedProjectDates);
@@ -163,40 +159,44 @@ projects.display();
 
 var education = {
     "schools": [{
-            "name": "Södertörn University",
-            "location": "Stockholm",
-            "degree": "Media and communication",
-            "majors": [""],
-            "dates": "2013-2015",
-            "schoolpic": "images/sh-ny-logo.png"
-        },
+        "name": "Udacity" ,
+        "location": "",
+        "degree":"Nanodegree front end",
+        "majors": [""],
+        "dates": "May 2017 - present",
+        "url": "udacity.com",
+        "schoolpic" : "images/udacity.png",
+        "link" : "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
 
+    } ,
+        {
+            "name": "Fullstack Academy",
+            "location": "New York",
+            "degree": "JavaScript JumpStart Online",
+            "majors": [""],
+            "dates": "April-May 2017",
+            "schoolpic": "images/fullstack.png",
+            "link" : "https://www.fullstackacademy.com/bootcamp-prep"
+        },
         {
             "name": "Fullstack Academy",
             "location": "New York",
             "degree": "Bootcamp Prep",
             "majors": [""],
-            "dates": "April-May 2017",
-            "schoolpic": "images/fullstack.png"
-
-        }
+            "dates": "March - April 2017",
+            "schoolpic": "images/fullstack.png",
+            "link" : "https://www.fullstackacademy.com"
+        },
+        {
+                "name": "Södertörn University",
+                "location": "Stockholm",
+                "degree": "Media and communication",
+                "majors": [""],
+                "dates": "2013-2015",
+                "schoolpic": "images/sh-ny-logo.png",
+                "link" : "http://www.sh.se/p3/ext/content.nsf/aget?openagent&key=startsideportal_engelsk_1308725461229"
+            }
     ],
-
-    "onlineCourses": [{
-        "title": "Nanodegree front end",
-        "school": "Udacity",
-        "dates": "May 2017 - present",
-        "url": "udacity.com",
-        "onlinePic" : "images/udacity.png"
-
-    } ,
-    {
-        "title": "JavaScript JumpStart Online",
-        "school": "Fullstack Academy",
-        "dates": "March - April 2017",
-        "url": "https://www.fullstackacademy.com/",
-        "onlinePic" : "images/fullstack.png"
-    }],
 
     display: function() {
 
@@ -210,7 +210,8 @@ var education = {
             var formattedSchoolPic = HTMLschoolPic.replace("%data%", education.schools[n].schoolpic);
             $(".education-entry:last").append(formattedSchoolPic);
             var formattedSchoolName = HTMLschoolName.replace("%data%", education.schools[n].name);
-            $(".education-entry:last").append(formattedSchoolName);
+            var formattedSchoolNameLink = formattedSchoolName.replace("%#%", education.schools[n].link);
+            $(".education-entry:last").append(formattedSchoolNameLink);
 
 
             var formattedSchoolDegree = HTMLschoolDegree.replace("%data%", education.schools[n].degree);
@@ -221,37 +222,6 @@ var education = {
 
             var formattedSchoolLocation = HTMLschoolLocation.replace("%data%", education.schools[n].location);
             $(".education-entry:last").append(formattedSchoolLocation);
-
-
-
-
-
-
-            for (var h = 0; h < education.schools[n].majors.length; h++) {
-                var formattedSchoolMajor = HTMLschoolMajor.replace("%data%", education.schools[n].majors[h]);
-
-
-            }
-
-        }
-            $("#education").append(HTMLonlineClasses);
-        for (var t = 0; t < education.onlineCourses.length; t++) {
-            $("#education").append(HTMLschoolStart);
-
-            var formattedOnlinePic = HTMLonlinePic.replace("%data%", education.onlineCourses[t].onlinePic);
-            $(".education-entry:last").append(formattedOnlinePic);
-
-            var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[t].school);
-            $(".education-entry:last").append(formattedOnlineSchool);
-
-            var formattedOnlineSchoolTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[t].title);
-            $(".education-entry:last").append(formattedOnlineSchoolTitle);
-
-            var formattedOnlineSchoolDates = HTMLonlineDates.replace("%data%", education.onlineCourses[t].dates);
-            $(".education-entry:last").append(formattedOnlineSchoolDates);
-
-            var formattedOnlineSchoolUrl = HTMLonlineURL.replace("%data%", education.onlineCourses[t].url);
-
 
         }
 

@@ -48,7 +48,7 @@ var HTMLworkDescription = '<p><br>%data%</p>';
 var HTMLworkPic = '<img src="%data%" class="img-responsive animation-element slide-left">';
 
 var HTMLprojectStart = '<div class="project-entry"></div>';
-var HTMLprojectTitle = '<a href="#">%data%</a>';
+var HTMLprojectTitle = '<a href="%#%">%data%</a>';
 var HTMLprojectDates = '<div class="date-text">%data%</div>';
 var HTMLprojectDescription = '<p><br>%data%</p>';
 var HTMLprojectImage = '<img class="img-responsive animation-element slide-left" src="%data%"><hr>';
@@ -61,7 +61,7 @@ var HTMLVolunteeringDescription = '<p><br>%data%</p><br><hr>';
 
 
 var HTMLschoolStart = '<div class="education-entry"></div>';
-var HTMLschoolName = '<a href="#">%data%</a>';
+var HTMLschoolName = '<a href="%#%">%data%</a>';
 var HTMLschoolDegree = '<a href="#" id="titleHeader">%data%</a>';
 var HTMLschoolDates = '<div class="date-text">%data%</div>';
 var HTMLschoolLocation = '<div class="location-text">%data%</div><br><hr>';

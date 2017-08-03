@@ -10,7 +10,7 @@
 
 }
 #main {
-  max-width: 1000px;
+
 }
 
 
@@ -30,10 +30,15 @@ h6 {
 
 
 i {
-    border: solid black;
+    border: solid #C678DD;
     border-width: 0 3px 3px 0;
     display: inline-block;
     padding: 3px;
+
+}
+
+.container {
+  background-image: url("images/transparent_background.png");
 }
 
 
@@ -49,8 +54,8 @@ i {
 }
 
 .navbar {
-  background: #fff;
-  height: 320px;
+  background: #282C34;
+  height: 100%;
 }
 
 
@@ -70,7 +75,7 @@ i {
 
 h1 {
   font-size: 26px;
-  color: #000;
+  color: #ABB2BF;
   line-height: 48px;
   display: inline;
   font-family: 'Raleway', serif;
@@ -218,7 +223,7 @@ a {
   text-decoration: none;
   letter-spacing: 3px;
   display: block;
-  color: #000;
+  color: #E06C75;
   font-weight:  200;
   text-transform: uppercase;
   font-family: 'Raleway', serif;
@@ -405,16 +410,18 @@ span {
 }
 
 @media only screen and (max-width:900px) {
-  .bioPic {
-    width: 175px;
-  }
+
 }
 
 .hamburger {
   display: none;
 }
 
-
+@media only screen and (max-width: 768px) {
+  .bioPic {
+    display: none;
+  }
+}
 
 @media only screen and (max-width: 767px) {
 
@@ -429,9 +436,6 @@ span {
 
   }
 
-  .bioPic {
-    width: 150px;
-  }
   .welcome-message {
     display: none;
   }
@@ -446,10 +450,8 @@ span {
         padding-top: 0px;
         margin-top: 0px;
         display: block;
-        background-color: #fff;
+        background-color: #282C34;
     }
-
-
 
 
   .menu {
@@ -511,7 +513,7 @@ span {
 }
 
 
-@media only screen and (min-width: 750px) {
+@media only screen and (min-width: 768px) {
   #skills-h3,
   .bioPic {
     display: block;
