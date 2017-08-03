@@ -122,7 +122,7 @@ var projects = {
             "link": "http://thecookingswede.com/",
             "dates": "june 2017",
             "description": "Learned javascript whiledoing it.",
-            "images": ["images/thecookingSwede-2.png"]
+            "images": ["images/thecookingSwede.png"]
         }
     ],
 
