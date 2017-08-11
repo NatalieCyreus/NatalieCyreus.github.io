@@ -122,8 +122,15 @@ var projects = {
             "link": "http://thecookingswede.com/",
             "dates": "june 2017",
             "description": "Learned javascript whiledoing it.",
-            "images": ["images/thecookingSwede.png"]
-        }
+            "images": ["images/the-cooking-swede.png"]
+        },
+        {
+                "title": "Nanodegree Resume",
+                "link": "#",
+                "dates": "june 2017",
+                "description": "Learned javascript whiledoing it.",
+                "images": ["images/nanodegreeProject.001.jpg"]
+            }
     ],
 
 

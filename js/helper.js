@@ -45,13 +45,13 @@ var HTMLworkTitle = '<div id="titleHeader"> %data%</div>';
 var HTMLworkDates = '<div class="date-text">%data%</div>';
 var HTMLworkLocation = '<div class="location-text">%data%</div>';
 var HTMLworkDescription = '<p><br>%data%</p>';
-var HTMLworkPic = '<img src="%data%" class="img-responsive animation-element slide-left">';
+var HTMLworkPic = '<img src="%data%" class="img-responsive">';
 
 var HTMLprojectStart = '<div class="project-entry"></div>';
 var HTMLprojectTitle = '<a href="%#%">%data%</a>';
 var HTMLprojectDates = '<div class="date-text">%data%</div>';
 var HTMLprojectDescription = '<p><br>%data%</p>';
-var HTMLprojectImage = '<img class="img-responsive animation-element slide-left" src="%data%"><hr>';
+var HTMLprojectImage = '<img class="img-responsive" src="%data%"><br>';
 
 
 var HTMLVolunteeringStart = '<div class="volunteering-entry"></div>';
