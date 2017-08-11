@@ -24,7 +24,7 @@ var HTMLemail = '<a href="#"><li class="contact-text zocial-email">%data%</li></
 var HTMLtwitter = '<li class="flex-item"><span class="contact-text">Twitter<span class="contact-text">%data%</span></li>';
 
 
-var HTMLlinkedIn = '<a href="https://www.linkedin.com/in/natalie-cyreus-ba5b04a5/"><li class="contact-text zocial-linkedin">%data%</li></a>';
+var HTMLlinkedIn = '<a href="https://www.linkedin.com/in/natalie-cyreus"><li class="contact-text zocial-linkedin">%data%</li></a>';
 
 var HTMLgithub = '<a href="https://github.com/NatalieCyreus"><li class="contact-text zocial-github">%data%</li></a>';
 

@@ -28,7 +28,7 @@ var bio = {
     },
     "welcomeMessage": "",
     "skills": ["HTML", "CSS", "JavaScript"],
-    "biopic": "images/natalieImageBW.jpeg",
+    "biopic": "images/natalie.jpg",
 
     display: function() {
 
@@ -129,7 +129,7 @@ var projects = {
                 "link": "#",
                 "dates": "june 2017",
                 "description": "Learned javascript whiledoing it.",
-                "images": ["images/nanodegreeProject.001.jpg"]
+                "images": ["images/resume.001.jpg"]
             }
     ],
 
