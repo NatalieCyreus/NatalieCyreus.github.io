@@ -48,7 +48,7 @@ var HTMLworkDescription = '<p><br>%data%</p>';
 var HTMLworkPic = '<img src="%data%" class="img-responsive">';
 
 var HTMLprojectStart = '<div class="project-entry"></div>';
-var HTMLprojectTitle = '<a href="%#%">%data%</a>';
+var HTMLprojectTitle = '<a target="_blank" href="%#%">%data%</a>';
 var HTMLprojectDates = '<div class="date-text">%data%</div>';
 var HTMLprojectDescription = '<p><br>%data%</p>';
 var HTMLprojectImage = '<img class="img-responsive" src="%data%"><br>';

@@ -118,17 +118,24 @@ work.display();
 
 var projects = {
     "projects": [{
+            "title": "Arcade Game",
+            "link": "https://github.com/NatalieCyreus/frontend-nanodegree-arcade-game",
+            "dates": "August 2017",
+            "description": "The forth project in the Udacity Nanodegree Program. Created with Object Oriented javascript. The game is build with Canvas, js. Html5, Css and Bootstrap for UX.",
+            "images": ["images/ArcadeGame.png"]
+        },
+        {
             "title": "The Cooking Swede",
             "link": "http://thecookingswede.com/",
             "dates": "june 2017",
-            "description": "Learned javascript whiledoing it.",
+            "description": "Food and coding are big passions of mine. I combine improving my skills in both, with my food website.",
             "images": ["images/cookingswede.png"]
         },
         {
                 "title": "Nanodegree Resume",
                 "link": "#",
                 "dates": "june 2017",
-                "description": "Learned javascript whiledoing it.",
+                "description": "This was the project for the third part of the Udacity Nanodegree progarm.",
                 "images": ["images/resume.001.jpg"]
             }
     ],
@@ -147,7 +154,7 @@ var projects = {
             $(".project-entry:last").append(formattedProjectDates);
 
             formattedProjectDescription = HTMLprojectDescription.replace("%data%", projects.projects[y].description);
-            //$(".project-entry:last").append(formattedProjectDescription);
+            $(".project-entry:last").append(formattedProjectDescription);
 
             for (var x = 0; x < projects.projects[y].images.length; x++) {
                 var formattedProjectImage = HTMLprojectImage.replace("%data%", projects.projects[y].images[x]);
