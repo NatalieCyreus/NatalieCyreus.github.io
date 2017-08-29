@@ -121,14 +121,14 @@ var projects = {
             "title": "Arcade Game",
             "link": "https://github.com/NatalieCyreus/frontend-nanodegree-arcade-game",
             "dates": "August 2017",
-            "description": "The fourth project in the Udacity Nanodegree Program. Created with Object Oriented javascript. The game is build with Canvas, js. Html5, Css and Bootstrap for UX.",
+            "description": "The fourth project in the Udacity Nanodegree Program. Created with Object Oriented javascript. The game is built with Canvas, js. Html5, Css and Bootstrap for UX.",
             "images": ["images/ArcadeGame.png"]
         },
         {
             "title": "The Cooking Swede",
             "link": "http://thecookingswede.com/",
             "dates": "june 2017",
-            "description": "Food and coding are big passions of mine. I combine improving my skills in both, with my food website.",
+            "description": "I use this project to improve my front-end and cooking skills!",
             "images": ["images/cookingswede.png"]
         },
         {
