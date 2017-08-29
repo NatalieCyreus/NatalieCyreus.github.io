@@ -121,7 +121,7 @@ var projects = {
             "title": "Arcade Game",
             "link": "https://github.com/NatalieCyreus/frontend-nanodegree-arcade-game",
             "dates": "August 2017",
-            "description": "The forth project in the Udacity Nanodegree Program. Created with Object Oriented javascript. The game is build with Canvas, js. Html5, Css and Bootstrap for UX.",
+            "description": "The fourth project in the Udacity Nanodegree Program. Created with Object Oriented javascript. The game is build with Canvas, js. Html5, Css and Bootstrap for UX.",
             "images": ["images/ArcadeGame.png"]
         },
         {
