@@ -87,7 +87,7 @@ var work = {
             location: "Stockholm, Sweden",
             dates: "2015-2017 ",
             description: "Tech and marketing driven b2b company focused in creating, storing and sharing augmented reality content.",
-            workpic: "images/SpinviewBG-Notext-LinkedIn.png"
+            workpic: ""
 
         }
     ],
@@ -103,7 +103,7 @@ var work = {
             var formattedWorkDescription = HTMLworkDescription.replace("%data%", work.jobs[i].description);
             var formattedWorkpic = HTMLworkPic.replace("%data%",work.jobs[i].workpic);
 
-            var formattedEmployerTitle = formattedWorkpic + EmployerFormatted + TitleFormatted + formattedWorkDates + formattedWorkLocation + formattedWorkDescription;
+            var formattedEmployerTitle =  EmployerFormatted + TitleFormatted + formattedWorkDates + formattedWorkLocation + formattedWorkDescription;
             $(".work-entry:last").append(formattedEmployerTitle);
 
         }
@@ -122,14 +122,14 @@ var projects = {
             "link": "https://github.com/NatalieCyreus/frontend-nanodegree-arcade-game",
             "dates": "August 2017",
             "description": "The fourth project in the Udacity Nanodegree Program. Created with Object Oriented javascript. The game is built with Canvas, js. Html5, Css and Bootstrap for UX.",
-            "images": ["images/ArcadeGame.png"]
+            "images": ["images/Arcadegame.jpg"]
         },
         {
             "title": "The Cooking Swede",
             "link": "http://thecookingswede.com/",
             "dates": "june 2017",
             "description": "I use this project to improve my front-end and cooking skills!",
-            "images": ["images/cookingswede.png"]
+            "images": ["images/theCookingSwede.png"]
         },
         {
                 "title": "Nanodegree Resume",
@@ -158,7 +158,7 @@ var projects = {
 
             for (var x = 0; x < projects.projects[y].images.length; x++) {
                 var formattedProjectImage = HTMLprojectImage.replace("%data%", projects.projects[y].images[x]);
-                $(".project-entry:last").append(formattedProjectImage);
+                //$(".project-entry:last").append(formattedProjectImage);
             }
         }
     }
@@ -222,7 +222,7 @@ var education = {
             $("#education").append(HTMLschoolStart);
 
             var formattedSchoolPic = HTMLschoolPic.replace("%data%", education.schools[n].schoolpic);
-            $(".education-entry:last").append(formattedSchoolPic);
+            //$(".education-entry:last").append(formattedSchoolPic);
             var formattedSchoolName = HTMLschoolName.replace("%data%", education.schools[n].name);
             var formattedSchoolNameLink = formattedSchoolName.replace("%#%", education.schools[n].link);
             $(".education-entry:last").append(formattedSchoolNameLink);

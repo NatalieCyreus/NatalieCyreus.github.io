@@ -2066,6 +2066,7 @@ input[type="button"].btn-block {
   border-bottom: 4px dashed;
   border-bottom: 4px solid \9;
   content: "";
+
 }
 .dropup .dropdown-menu,
 .navbar-fixed-bottom .dropdown .dropdown-menu {
@@ -2329,6 +2330,7 @@ input[type="button"].btn-block {
 .navbar-fixed-top .navbar-collapse,
 .navbar-fixed-bottom .navbar-collapse {
   max-height: 340px;
+
 }
 @media (max-device-width: 480px) and (orientation: landscape) {
   .navbar-fixed-top .navbar-collapse,
