@@ -15,13 +15,13 @@ replace the %data% placeholder text you see in them.
 
 
 var HTMLheaderName = '<div id="name"><h1 >%data%</h1></div>';
-var HTMLheaderRole = '<div id="titleHeader">%data%</div><hr class="navHeader">';
+var HTMLheaderRole = '<div id="titleHeader">%data%</div><br>';
 
 var HTMLcontactGeneric = '<div class="flex-item"><span class="contact-text">%contact%</span><span class="contact-text">%data%</span></div>';
 
 var HTMLmobile = '<a href="#"><li class="flex-item"><span class="contact-text">phone</span><span class="contact-text">%data%</span></li></a>';
 var HTMLemail = '<a href="mailto:nataliecyreus@gmail.com"><li class="contact-text zocial-email">%data%</li></a>';
-var HTMLtwitter = '<li class="flex-item"><span class="contact-text">Twitter<span class="contact-text">%data%</span></li>';
+var HTMLtwitter = '<a target="blank" href="https://twitter.com/CyreusNatalie"><li class="flex-item"><span class="contact-text"><span class="contact-text">%data%</span></li></a>';
 
 
 var HTMLlinkedIn = '<a href="https://www.linkedin.com/in/natalie-cyreus"><li class="contact-text zocial-linkedin">%data%</li></a>';

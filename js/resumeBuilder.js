@@ -11,7 +11,6 @@ $('.hamburger').on('click', function(){
   });
 
 
-
 /***************************** BIO SECTION ******************************/
 var bio = {
     "name": "Natalie Serruya-Cyreus",
@@ -20,7 +19,7 @@ var bio = {
         "mobile": "+12016582233",
         "email": " nataliecyreus@gmail.com",
         "github": " github",
-        "twitter": "xxxx.twitter.com",
+        "twitter": "twitter",
         "location": " New York",
         "blog": " thecookingswede.com",
         "skype" : " skype",
@@ -35,7 +34,7 @@ var bio = {
       for (k = 0; k < bio.skills.length; k++) {
 
         var formattedSkill = HTMLskills.replace("%data%", bio.skills[k]);
-        $(".navbar").prepend(formattedSkill);
+        $(".menu").prepend(formattedSkill);
       }
         var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
         $(".navbar").prepend(formattedRole);
@@ -47,9 +46,9 @@ var bio = {
 
 
         var formattedImage = HTMLbioPic.replace("%data%", bio.biopic);
-        $("#header").prepend(HTMLskillsStart);
+        $("#menu").prepend(HTMLskillsStart);
 
-        $("#skills").append(HTMLskillsStart);
+        $("#menu").append(HTMLskillsStart);
 
 
 
@@ -60,6 +59,7 @@ var bio = {
         var email = bio.contacts.email;
         var formattedEmail = HTMLemail.replace("%data%", email);
         var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
+        var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
         var formattedBlog = HTMLblog.replace("%data%", bio.contacts.blog);
         var formattedPhone = HTMLmobile.replace("%data%", bio.contacts.mobile);
         var formattedSkype = HTMLskype.replace("%data%", bio.contacts.skype);
@@ -68,7 +68,7 @@ var bio = {
         var formattedLinkedIn = HTMLlinkedIn.replace("%data%", bio.contacts.linkedIn);
 
         var HTMLhamburgerMenu = '<div href="#" class="hamburger"><i class="right"></i></div>';
-        var HTMLHeaderMenu = formattedLocation + formattedLinkedIn + formattedGithub  + formattedEmail ;
+        var HTMLHeaderMenu = formattedLocation + formattedLinkedIn + formattedGithub  + formattedTwitter + formattedEmail ;
         $(".menu").append(HTMLHeaderMenu);
         $(".hamburger").append(HTMLhamburgerMenu);
         $(".navbar").append(formattedImage);
@@ -133,7 +133,7 @@ var projects = {
         },
         {
                 "title": "Nanodegree Resume",
-                "link": "#",
+                "link": "https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fnataliecyreus.github.io%2F&tab=desktop",
                 "dates": "june 2017",
                 "description": "This was the project for the third part of the Udacity Nanodegree progarm.",
                 "images": ["images/resume.001.jpg"]

@@ -14,18 +14,19 @@
 
 <body>
   <style>
-  i {
+i {
       border: solid #C678DD;
-      border-width: 0 3px 3px 0;
+      border-width: 0 5px 5px 0;
       display: inline-block;
       padding: 3px;
 
   }
 
   .right {
-      transform: rotate(-45deg);
-      -webkit-transform: rotate(-45deg);
+      transform: rotate(-315deg);
+      -webkit-transform: rotate(-315deg);
   }
+
 
   .navbar {
     background: #282C34;
@@ -132,11 +133,6 @@
     display: none;
   }
 
-
-  @media only screen and (max-width:900px) {
-
-  }
-
   .hamburger {
     display: none;
   }
@@ -150,12 +146,14 @@
   @media only screen and (max-width: 767px) {
 
     .navbar-fixed-top {
-      height: 220px;
+      height: 120px;
+    }
+    h1 {
+      font-size: 16px;
     }
 
-
     .container {
-      margin-top: 220px;
+      margin-top: 170px;
     }
 
     .hamburger {
@@ -178,7 +176,7 @@
 
       }
       .open {
-        height: 200px;
+        height: 250px;
         background-color: #282C34;
         border-style: solid;
         padding-left: 20px;
