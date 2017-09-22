@@ -128,8 +128,8 @@ var projects = {
             "title": "The Cooking Swede",
             "link": "http://thecookingswede.com/",
             "dates": "june 2017",
-            "description": "I use this project to improve my front-end and cooking skills!",
-            "images": ["images/theCookingSwede.png"]
+            "description": "I use this project to improve my front-end, photography and cooking skills!",
+            "images": ["images/theCookingSwede.jpg"]
         },
         {
                 "title": "Nanodegree Resume",
