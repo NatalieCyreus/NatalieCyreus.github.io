@@ -233,7 +233,7 @@ a {
 }
 a:hover,
 a:focus {
-  color: #grey;
+  color: blue;
   text-decoration: underline;
 
 }
