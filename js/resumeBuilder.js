@@ -129,7 +129,7 @@ var projects = {
             "link": "http://thecookingswede.com/",
             "dates": "june 2017",
             "description": "I use this project to improve my front-end, photography and cooking skills!",
-            "images": ["images/theCookingSwede.jpg"]
+            "images": ["images/theCookingS.jpg"]
         },
         {
                 "title": "Nanodegree Resume",
