@@ -122,7 +122,7 @@ var projects = {
             "link": "https://github.com/NatalieCyreus/frontend-nanodegree-arcade-game",
             "dates": "August 2017",
             "description": "The fourth project in the Udacity Nanodegree Program. Created with Object Oriented javascript. The game is built with Canvas, js. Html5, Css and Bootstrap for UX.",
-            "images": ["images/Arcadegame.jpg"]
+            "images": ["images/arcade.jpg"]
         },
         {
             "title": "The Cooking Swede",
@@ -136,7 +136,7 @@ var projects = {
                 "link": "https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fnataliecyreus.github.io%2F&tab=desktop",
                 "dates": "june 2017",
                 "description": "This was the project for the third part of the Udacity Nanodegree progarm.",
-                "images": ["images/resume.001.jpg"]
+                "images": ["images/resume.jpg"]
             }
     ],
 
@@ -158,7 +158,7 @@ var projects = {
 
             for (var x = 0; x < projects.projects[y].images.length; x++) {
                 var formattedProjectImage = HTMLprojectImage.replace("%data%", projects.projects[y].images[x]);
-                //$(".project-entry:last").append(formattedProjectImage);
+                $(".project-entry:last").append(formattedProjectImage);
             }
         }
     }
