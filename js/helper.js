@@ -41,7 +41,7 @@ var HTMLskills ='<div class="role-text">%data%</div>';
 
 var HTMLworkStart = '<div class="work-entry"></div>';
 var HTMLworkEmployer = '<a href="https://spinviewglobal.com/">%data%</a>';
-var HTMLworkTitle = '<div id="titleHeader"> %data%</div>';
+var HTMLworkTitle = '<h4> %data%</h4>';
 var HTMLworkDates = '<div class="date-text">%data%</div>';
 var HTMLworkLocation = '<div class="location-text">%data%</div>';
 var HTMLworkDescription = '<p><br>%data%</p>';
@@ -55,14 +55,14 @@ var HTMLprojectImage = '<img class="img-responsive" src="%data%"><br>';
 
 
 var HTMLVolunteeringStart = '<div class="volunteering-entry"></div>';
-var HTMLVolunteeringTitle = '<div id="titleHeader">%data%</div>';
+var HTMLVolunteeringTitle = '<h4>%data%</h4>';
 var HTMLVolunteeringDates = '<div class="date-text">%data%</div>';
 var HTMLVolunteeringDescription = '<p><br>%data%</p><br><hr>';
 
 
 var HTMLschoolStart = '<div class="education-entry"></div>';
 var HTMLschoolName = '<a href="%#%">%data%</a>';
-var HTMLschoolDegree = '<a href="#" id="titleHeader">%data%</a>';
+var HTMLschoolDegree = '<h4>%data%</h4>';
 var HTMLschoolDates = '<div class="date-text">%data%</div>';
 var HTMLschoolLocation = '<div class="location-text">%data%</div><br><hr>';
 var HTMLschoolMajor = '<em class="school"><br>Major: %data%</em>';
