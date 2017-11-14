@@ -1,1 +1,172 @@
+body {
+  background-color: #282C34;
+}
 
+  .line1, .line2, .line3 {
+  margin-top:5px;
+  background-color:#fff;
+  width:25px;
+  height:3px;
+  display:block;
+  position:relative;
+  opacity:1.0;
+  border-radius:15%;
+  transition: all .3s;
+}
+
+  .navbar {
+    background: #21252b;
+    height: 100%;
+  }
+
+  button {
+    color: white;
+    background-color: #21252b;
+    border-color: #000;
+  }
+
+  h1 {
+    font-size: 18px;
+    color: #ABB2BF;
+    display: inline;
+    letter-spacing: 3px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: right;
+  }
+
+  h2 {
+    color: #E26B6D;
+  }
+
+h5 {
+      color: #D19A66;
+      letter-spacing: 2.5px;
+      margin: 0px;
+  }
+
+
+  .contact-text {
+      font-size: 14px;
+      color: #98C379;
+      font-family: 'Share Tech Mono', monospace;
+      text-transform: uppercase;
+      margin-top: 2px;
+      text-align: left;
+      line-height: 2.5;
+  }
+
+  h3 {
+    color: #ABB2BF;
+  }
+
+
+  h4 {
+    color: #ABB2BF;
+
+  }
+
+
+
+a {
+    color: #C775DF;
+}
+
+  #titleHeader {
+    font-size: 15px;
+    text-decoration: none;
+    letter-spacing: 3px;
+    display: block;
+    color: #E06C75;
+    font-weight:  200;
+    text-transform: uppercase;
+    font-family: 'Raleway', serif;
+
+  }
+
+p {
+  color: #98C379;
+  margin: 1px;
+}
+
+
+  ul {
+    list-style-type: none;
+    padding-left: 0px;
+    padding-bottom: 0px;
+  }
+
+  .bioPic {
+    float: left;
+    padding: 10px;
+    width: 200px;
+    display: none;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .bioPic {
+      display: none;
+    }
+  }
+
+  @media only screen and (max-width: 767px) {
+
+    .navbar-fixed-top {
+      height: 70px;
+    }
+    h1 {
+      font-size: 16px;
+    }
+
+    .container {
+      margin-top: 100px;
+    }
+
+    .hamburger {
+          cursor: pointer;
+          padding: 0px;
+          padding-top: 0px;
+          margin-top: 0px;
+          display: block;
+          background-color:#21252b;
+      }
+
+    .menu {
+          height: 0;
+          overflow: hidden;
+      }
+
+      .open {
+        height: 200px;
+        background-color: #21252b;
+        padding-left: 20px;
+        margin-top: 8px;
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+
+    .navbar {
+      margin-bottom: 0px;
+      padding-bottom: 15px;
+      margin-bottom: 15px;
+    }
+
+    #name {
+      font-size: 10px;
+      line-height: normal;
+
+    }
+
+  }
+
+
+  @media only screen and (min-width: 768px) {
+    #skills-h3,
+    .bioPic {
+      display: block;
+    }
+  }

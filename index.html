@@ -1,293 +1,114 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="utf-8">
-    <title>Resume</title>
-    <meta name="description" content="Natalie Cyreus work resume">
-    <meta name="keywords" content="resume, work, Natalie Cyreus">
-    <meta name="author" content="Natalie Cyreus">
-    <link async href="bootstrap/css/bootstrap.css" rel="stylesheet">
-    <link async href="bootstrap/js/bootstrap.js" rel="stylesheet">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-</head>
-
-<body>
-  <style>
-i {
-      border: solid #C678DD;
-      border-width: 0 5px 5px 0;
-      display: inline-block;
-      padding: 3px;
-
-  }
-
-  .right {
-      transform: rotate(-315deg);
-      -webkit-transform: rotate(-315deg);
-  }
-
-
-  .navbar {
-    background: #282C34;
-    height: 100%;
-  }
-
-  h1 {
-    font-size: 26px;
-    color: #ABB2BF;
-    line-height: 48px;
-    display: inline;
-    font-family: 'Raleway', serif;
-    letter-spacing: 3px;
-    font-weight: bold;
-    text-transform: uppercase;
-    text-align: right;
-  }
-
-  .role-text  {
-      font-size: 11px;
-      color: #D19A66;
-      font-family: 'Raleway', serif;
-      letter-spacing: 2.5px;
-      font-weight: bold;
-      text-transform: uppercase;
-      margin-top: 5px;
-      text-align: left;
-  }
-
-
-  .contact-text {
-      font-size: 14px;
-      color: #98C379;
-      font-family: 'Share Tech Mono', monospace;
-      text-transform: uppercase;
-      margin-top: 2px;
-      text-align: left;
-      line-height: 2.5;
-  }
-
-  h3 {
-    font-size: 14px;
-    text-transform: uppercase;
-    font-weight: 500;
-    color: #000;
-    font-weight: bold;
-    line-height: 29px;
-    padding: 10px;
-    letter-spacing: 3px;
-    line-height: 1.5;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    text-align: center;
-    font-family: 'Share Tech Mono', monospace;
-
-  }
-
-
-  h4 {
-    font-weight: lighter;
-    font-size: 14px;
-    color: #4a4a4a;
-    line-height: 17px;
-    letter-spacing: 2px;
-  }
-
-  a {
-    font-size: 15px;
-    text-decoration: none;
-    letter-spacing: 3px;
-    display: block;
-    color: blue;
-    font-weight: 400;
-    text-transform: uppercase;
-    font-family: 'Raleway', serif;
-  }
-
-  #titleHeader {
-    font-size: 15px;
-    text-decoration: none;
-    letter-spacing: 3px;
-    display: block;
-    color: #E06C75;
-    font-weight:  200;
-    text-transform: uppercase;
-    font-family: 'Raleway', serif;
-
-  }
-
-
-  ul {
-    list-style-type: none;
-    padding-left: 0px;
-    padding-bottom: 0px;
-  }
-
-  .bioPic {
-    float: left;
-    padding: 10px;
-    width: 200px;
-    display: none;
-  }
-
-  .hamburger {
-    display: none;
-  }
-
-  @media only screen and (max-width: 768px) {
-    .bioPic {
-      display: none;
-    }
-  }
-
-  @media only screen and (max-width: 767px) {
-
-    .navbar-fixed-top {
-      height: 120px;
-    }
-    h1 {
-      font-size: 16px;
-    }
-
-    .container {
-      margin-top: 170px;
-    }
-
-    .hamburger {
-          cursor: pointer;
-          padding: 0px;
-          padding-top: 0px;
-          margin-top: 0px;
-          display: block;
-          background-color: #282C34;
-      }
-
-    .menu {
-          height: 0;
-          overflow: hidden;
-      }
-
-      .contact-text-bold {
-        font-size: 13px;
-        line-height: 2.5;
-
-      }
-      .open {
-        height: 250px;
-        background-color: #282C34;
-        border-style: solid;
-        padding-left: 20px;
-        margin-top: 0px;
-        margin-left: -20px;
-        margin-right: -20px;
-    }
-
-    .navbar {
-      margin-bottom: 0px;
-      padding-bottom: 15px;
-      margin-bottom: 15px;
-    }
-
-    #name {
-      font-size: 10px;
-      line-height: normal;
-
-    }
-
-  }
-
-
-  @media only screen and (min-width: 768px) {
-    #skills-h3,
-    .bioPic {
-      display: block;
-    }
-  }
-  </style>
-    <div id="main">
-
+	<head>
+		<meta charset="utf-8">
+		<title>Resume</title>
+		<meta name="description" content="Natalie Cyreus work resume">
+		<meta name="keywords" content="resume, work, Natalie Cyreus">
+		<meta name="author" content="Natalie Cyreus">
+		<link async href="bootstrap/css/bootstrap.css" rel="stylesheet">
+		<link async href="css/style.css" rel="stylesheet">
+		<link async href="bootstrap/js/bootstrap.js" rel="stylesheet">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+	</head>
+	<body>
+		<div id="main">
+			<div class="row">
+				<div class="col-sm-4 navbar navbar-fixed-top">
+					<a href="#" class="hamburger"></a>
+					<ul class="menu"></ul>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-4"></div>
+					<div class="col-sm-8" >
+						<h2>.workExperience {</h2>
+						<div class="col-sm-1"></div>
+						<div class="col-sm-11" id="workExperience"></div>
+					</div>
+				</div>
         <div class="row">
-            <div class="col-sm-4 navbar navbar-fixed-top">
-
-                <a href="#" class="hamburger"></a>
-                <ul class="menu"></ul>
-
-            </div>
+          <div class="col-sm-4">
+          </div>
+          <div class="col-sm-8">
+            <h2>}</h2>
+          </div>
         </div>
-
-        <div class="container">
-
-
-            <div class="row">
-                <div class="col-sm-4">
-                </div>
-                <div class="col-sm-8" id="workExperience">
-                    <h2>Work Experience<hr></h2>
-                </div>
-            </div>
-
-
-            <div class="row">
-                <div class="col-sm-4">
-                </div>
-                <div id="projects" class="col-sm-8">
-                    <h2>Projects<hr></h2>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-sm-4">
-                </div>
-                <div id="education" class="col-sm-8">
-                    <h2>Education<hr></h2>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-sm-4">
-                </div>
-                <div class="col-sm-8 grey" id="volunteering">
-                    <h2>Volunteering<hr></h2>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-    <script src="js/jQuery-compressed.js"></script>
-    <script src="js/helper-mini.js"></script>
-    <script src="js/resumeBuilder-compressed.js"></script>
-
-
-    <script>
-
-
-        if (document.getElementsByClassName('flex-item').length === 0) {
-            document.getElementById('topContacts').style.display = 'none';
-        }
-        if (document.getElementsByClassName('skills-entry').length === 0) {
-            document.getElementById('skills').style.display = 'none';
-        }
-        if (document.getElementsByClassName('work-entry').length === 0) {
-            document.getElementById('workExperience').style.display = 'none';
-        }
-        if (document.getElementsByClassName('project-entry').length === 0) {
-            document.getElementById('projects').style.display = 'none';
-        }
-        if (document.getElementsByClassName('education-entry').length === 0) {
-            document.getElementById('education').style.display = 'none';
-        }
-        if (document.getElementsByClassName('volunteering-entry').length === 0) {
-            document.getElementById('volunteering').style.display = 'none';
-        }
-        if (document.getElementsByClassName('flex-item').length === 0) {
-            document.getElementById('lets-connect').style.display = 'none';
-        }
-
-    </script>
-
-    <link href="https://fonts.googleapis.com/css?family=Abel|Amatic+SC|Raleway:100,200,300,400,500,600,700,800,900|Playfair+Display" rel="stylesheet">
-
-</body>
-
+				<div class="row">
+					<div class="col-sm-4"></div>
+					<div  class="col-sm-8">
+						<h2>.projects {</h2>
+						<div class="col-sm-1"></div>
+						<div class="col-sm-11" id="projects"></div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-4"></div>
+					<div class="col-sm-8">
+						<div class="col-sm-1"></div>
+						<div class="col-sm-11">
+							<br>
+							<a>Cat Clicker project {</a>
+							<p>about: In udacity nanodegree part 5: Advanced Interactive Websites course This was a small project in the Changing expectations course, focused to learn how to write well-structured code. How to write good code for when projects grow. Klick on the kitten image to count, or on the other kitten bittons to view more!</p>
+							<ul id="catButtons">
+							</ul>
+							<div id="cat">
+								<div class="col-sm-12">
+									<p id="kittenName"></p>
+								</div>
+								<div class="col-sm-12">
+									<p id="clicks"></p>
+								</div>
+								<div class="col-sm-12"> <img class="img-responsive" id="catImg" src="" alt="cute cat"></div>
+								<a>}</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-4"></div>
+					<div class="col-sm-8">
+						<h2>}</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-4">
+					</div>
+					<div class="col-sm-8">
+						<h2>.education {</h2>
+						<div class="col-sm-1"></div>
+						<div class="col-sm-11" id="education"></div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-4">
+					</div>
+					<div class="col-sm-8">
+						<h2>}</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-4">
+					</div>
+					<div class="col-sm-8 grey">
+						<h2>.volunteering {</h2>
+						<div class="col-sm-1"></div>
+						<div class="col-sm-11" id="volunteering"></div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-4">
+					</div>
+					<div class="col-sm-8">
+						<h2>}</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="js/jQuery-compressed.js"></script>
+		<script src="js/helper.js"></script>
+		<script src="js/kitten.js"></script>
+		<script src="js/resumeBuilder.js"></script>
+	</body>
 </html>

@@ -1,77 +1,55 @@
 
 $('.hamburger').on('click', function(){
-    // // if menu is closed, slide down
-    // if ($('.menu').hasClass('open')) {
-    //   $('.menu').removeClass('open');
-    // }else {
-    //   // if menu is open, slide up
-    //     $('.menu').addClass('open');
-    //   }
       $('.menu').toggleClass('open');
   });
+
 
 
 /***************************** BIO SECTION ******************************/
 var bio = {
     "name": "Natalie Serruya-Cyreus",
-    "role": "Web developer",
+    "role": "webDeveloper",
     "contacts": {
         "mobile": "+12016582233",
         "email": " nataliecyreus@gmail.com",
-        "github": " github",
-        "twitter": "twitter",
+        "github": " @NatalieCyreus",
+        "twitter": " @CyreusNatalie",
         "location": " New York",
-        "blog": " thecookingswede.com",
-        "skype" : " skype",
-        "linkedIn" : " LinkedIn"
+        "linkedIn" : " /natalie-cyreus"
     },
-    "welcomeMessage": "",
     "skills": ["HTML", "CSS", "JavaScript"],
     "biopic": "images/natalie.jpg",
 
     display: function() {
 
-      for (k = 0; k < bio.skills.length; k++) {
-
-        var formattedSkill = HTMLskills.replace("%data%", bio.skills[k]);
+      for (var i = 0; i < bio.skills.length; i++) {
+        var formattedSkill = HTMLskills.replace("%data%", bio.skills[i]);
         $(".menu").prepend(formattedSkill);
       }
+
         var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
-        $(".navbar").prepend(formattedRole);
-
         var formattedName = HTMLheaderName.replace("%data%", bio.name);
-        $(".navbar").prepend(formattedName);
-
-
-
-
         var formattedImage = HTMLbioPic.replace("%data%", bio.biopic);
-        $("#menu").prepend(HTMLskillsStart);
-
-        $("#menu").append(HTMLskillsStart);
-
-
-
-
-        var formattedWelcome = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
-        $("#header").append(formattedWelcome);
-
         var email = bio.contacts.email;
         var formattedEmail = HTMLemail.replace("%data%", email);
         var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
         var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
-        var formattedBlog = HTMLblog.replace("%data%", bio.contacts.blog);
-        var formattedPhone = HTMLmobile.replace("%data%", bio.contacts.mobile);
         var formattedSkype = HTMLskype.replace("%data%", bio.contacts.skype);
         var locationNY = bio.contacts.location;
         var formattedLocation = HTMLlocation.replace("%data%", locationNY);
         var formattedLinkedIn = HTMLlinkedIn.replace("%data%", bio.contacts.linkedIn);
 
-        var HTMLhamburgerMenu = '<div href="#" class="hamburger"><i class="right"></i></div>';
+        var HTMLhamburgerMenu = '<div href="#" class="hamburger"><span class="line1"></span><span class="line2"></span><span class="line3"></span></div>';
         var HTMLHeaderMenu = formattedLocation + formattedLinkedIn + formattedGithub  + formattedTwitter + formattedEmail ;
+
+
+        $(".menu").prepend(formattedRole);
+        $(".navbar").prepend(formattedName);
         $(".menu").append(HTMLHeaderMenu);
         $(".hamburger").append(HTMLhamburgerMenu);
         $(".navbar").append(formattedImage);
+
+
 
     }
 };
@@ -129,14 +107,14 @@ var projects = {
             "link": "http://thecookingswede.com/",
             "dates": "june 2017",
             "description": "I use this project to improve my front-end, photography and cooking skills!",
-            "images": ["images/theCookingS.jpg"]
+            "images": ["images/thecookingSwedeProject.jpg"]
         },
         {
                 "title": "Nanodegree Resume",
                 "link": "https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fnataliecyreus.github.io%2F&tab=desktop",
                 "dates": "june 2017",
                 "description": "This was the project for the third part of the Udacity Nanodegree progarm.",
-                "images": ["images/resume.jpg"]
+                "images": ["images/resume2017.jpg"]
             }
     ],
 
@@ -166,14 +144,9 @@ var projects = {
 
 projects.display();
 
-
-
-
-/*************************** EDUCATION SECTION ****************************/
-
 var education = {
     "schools": [{
-        "name": "Udacity" ,
+        "name": "Udacity " ,
         "location": "",
         "degree":"Nanodegree front end",
         "majors": [""],
@@ -214,10 +187,7 @@ var education = {
 
     display: function() {
 
-
-
         for (var n = 0; n < education.schools.length; n++) {
-
 
             $("#education").append(HTMLschoolStart);
 
@@ -246,7 +216,6 @@ var education = {
 education.display();
 
 
-/*************************** VOLUNTEERING SECTION ****************************/
 var volunteering = {
     "project": [{
             "title": "Leader Red Cross",
@@ -255,7 +224,7 @@ var volunteering = {
             "description": "A language school for new arrived to Sweden. I re-opened and developed a meeting area in Flemingsberg with the goal to welcome and educate new arrived to learn about Swedish society and language."
         },
         {
-            "title": "Board member Red Cross Flemingsberg.",
+            "title": "Board member Red Cross Flemingsberg",
             "dates": "2014-2015",
             "role": "Red Cross",
             "description": "Boardmember of the Flemingsberg division, as one of the most active members of the board I contributed with much knowledge of the needs from the language meetings."
@@ -273,63 +242,10 @@ var volunteering = {
             var formattedVolunteeringDates = HTMLprojectDates.replace("%data%", volunteering.project[w].dates);
             $(".volunteering-entry:last").append(formattedVolunteeringDates);
 
-            var formattedVolunteeringDescription = HTMLprojectDescription.replace("%data%", volunteering.project[w].description);
+            var formattedVolunteeringDescription = HTMLVolunteeringDescription.replace("%data%", volunteering.project[w].description);
             $(".volunteering-entry:last").append(formattedVolunteeringDescription);
         }
     }
 };
 
 volunteering.display();
-
-
-
-/*************************** MAP SECTION ****************************/
-
-//$("#mapDiv").append(googleMap);
-
-/******************** INTERNATIONALIZE SECTION **************************/
-
-/*
-$("#main").append(internationalizeButton);
-
-function inName() {
-  var splitName = bio.name.split(" ");
-   splitName[0]= splitName[0].toLowerCase();
-   var internationalizedName = splitName.join(" ");
-   return internationalizedName;
-}
-
-inName();
-
-*/
-
-/******************** ANIMATION SECTION **************************/
-
-//code from https://www.sitepoint.com/scroll-based-animations-jquery-css3/ , https://codepen.io/SitePoint/pen/yNzYqm
-
-var $animation_elements = $('.animation-element');
-var $window = $(window);
-
-function check_if_in_view() {
-  var window_height = $window.height();
-  var window_top_position = $window.scrollTop();
-  var window_bottom_position = (window_top_position + window_height);
-
-  $.each($animation_elements, function() {
-    var $element = $(this);
-    var element_height = $element.outerHeight();
-    var element_top_position = $element.offset().top;
-    var element_bottom_position = (element_top_position + element_height);
-
-    //check to see if this current container is within viewport
-    if ((element_bottom_position >= window_top_position) &&
-        (element_top_position <= window_bottom_position)) {
-      $element.addClass('in-view');
-    } else {
-      $element.removeClass('in-view');
-    }
-  });
-}
-
-$window.on('scroll resize', check_if_in_view);
-$window.trigger('scroll');
