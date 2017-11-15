@@ -2,9 +2,6 @@
 $('.hamburger').on('click', function(){
       $('.menu').toggleClass('open');
   });
-
-
-
 /***************************** BIO SECTION ******************************/
 var bio = {
     "name": "Natalie Serruya-Cyreus",
@@ -14,19 +11,19 @@ var bio = {
         "email": " nataliecyreus@gmail.com",
         "github": " @NatalieCyreus",
         "twitter": " @CyreusNatalie",
-        "location": " New York",
+        "location": " New York, NY US",
         "linkedIn" : " /natalie-cyreus"
     },
     "skills": ["HTML", "CSS", "JavaScript"],
     "biopic": "images/natalie.jpg",
 
     display: function() {
-
+      /*
       for (var i = 0; i < bio.skills.length; i++) {
         var formattedSkill = HTMLskills.replace("%data%", bio.skills[i]);
         $(".menu").prepend(formattedSkill);
       }
-
+*/
         var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
         var formattedName = HTMLheaderName.replace("%data%", bio.name);
         var formattedImage = HTMLbioPic.replace("%data%", bio.biopic);
@@ -65,7 +62,7 @@ var work = {
             location: "Stockholm, Sweden",
             dates: "2015-2017 ",
             description: "Tech and marketing driven b2b company focused in creating, storing and sharing augmented reality content.",
-            workpic: ""
+            workpic: "images/spinviewVr.jpg"
 
         }
     ],
@@ -81,7 +78,7 @@ var work = {
             var formattedWorkDescription = HTMLworkDescription.replace("%data%", work.jobs[i].description);
             var formattedWorkpic = HTMLworkPic.replace("%data%",work.jobs[i].workpic);
 
-            var formattedEmployerTitle =  EmployerFormatted + TitleFormatted + formattedWorkDates + formattedWorkLocation + formattedWorkDescription;
+            var formattedEmployerTitle =  EmployerFormatted + TitleFormatted + formattedWorkDates + formattedWorkLocation + formattedWorkDescription + formattedWorkpic;
             $(".work-entry:last").append(formattedEmployerTitle);
 
         }
@@ -95,27 +92,29 @@ work.display();
 
 
 var projects = {
-    "projects": [{
+    "projects": [
+      /*{
             "title": "Arcade Game",
             "link": "https://github.com/NatalieCyreus/frontend-nanodegree-arcade-game",
             "dates": "August 2017",
             "description": "The fourth project in the Udacity Nanodegree Program. Created with Object Oriented javascript. The game is built with Canvas, js. Html5, Css and Bootstrap for UX.",
             "images": ["images/arcade.jpg"]
-        },
+        },*/
         {
             "title": "The Cooking Swede",
             "link": "http://thecookingswede.com/",
             "dates": "june 2017",
             "description": "I use this project to improve my front-end, photography and cooking skills!",
-            "images": ["images/thecookingSwedeProject.jpg"]
-        },
+            "images": ["images/burger.jpg"]
+        }
+        /*,
         {
                 "title": "Nanodegree Resume",
                 "link": "https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fnataliecyreus.github.io%2F&tab=desktop",
                 "dates": "june 2017",
                 "description": "This was the project for the third part of the Udacity Nanodegree progarm.",
                 "images": ["images/resume2017.jpg"]
-            }
+            }*/
     ],
 
 
@@ -147,8 +146,8 @@ projects.display();
 var education = {
     "schools": [{
         "name": "Udacity " ,
-        "location": "",
-        "degree":"Nanodegree front end",
+        "location": "online",
+        "degree":"Front-End Web Developer Nanodegree Program",
         "majors": [""],
         "dates": "May 2017 - present",
         "url": "udacity.com",

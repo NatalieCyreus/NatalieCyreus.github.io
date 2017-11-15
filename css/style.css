@@ -1,10 +1,12 @@
-body {
-  background-color: #282C34;
+
+#bG {
+background-color: #282c34;
+color:#ABB2BF;
 }
 
   .line1, .line2, .line3 {
   margin-top:5px;
-  background-color:#fff;
+  background-color:#E26B6D;
   width:25px;
   height:3px;
   display:block;
@@ -14,16 +16,27 @@ body {
   transition: all .3s;
 }
 
+.tab-pane {
+  color:#E26B6D;
+}
+img {
+  border-radius: 5px;
+}
+
   .navbar {
     background: #21252b;
     height: 100%;
   }
 
   button {
-    color: white;
     background-color: #21252b;
     border-color: #000;
   }
+
+  button.active {
+    border-width: medium;
+  }
+
 
   h1 {
     font-size: 18px;
@@ -37,9 +50,10 @@ body {
 
   h2 {
     color: #E26B6D;
+    margin: 0px;
   }
 
-h5 {
+.skills {
       color: #D19A66;
       letter-spacing: 2.5px;
       margin: 0px;
@@ -61,16 +75,9 @@ h5 {
   }
 
 
-  h4 {
+  #name {
     color: #ABB2BF;
-
   }
-
-
-
-a {
-    color: #C775DF;
-}
 
   #titleHeader {
     font-size: 15px;
@@ -85,12 +92,18 @@ a {
   }
 
 p {
+  line-height: normal;
   color: #98C379;
-  margin: 1px;
+  font-size: 16px;
+  max-width: 550px;
 }
 
+a {
+  font-size: 16px;
+  color:#C775DF;
+}
 
-  ul {
+ul  {
     list-style-type: none;
     padding-left: 0px;
     padding-bottom: 0px;
@@ -132,7 +145,7 @@ p {
           padding-top: 0px;
           margin-top: 0px;
           display: block;
-          background-color:#21252b;
+
       }
 
     .menu {

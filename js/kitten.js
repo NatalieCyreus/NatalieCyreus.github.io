@@ -90,17 +90,19 @@ var buttonView = {
       var cats = octopus.getCats();
       this.buttonElem.innerHTML = '';
 
-
       for (i = 0; i < cats.length; i++){
 
         cat = cats[i];
         elem = document.createElement('button');
         elem.textContent = cat.name;
 
+
+
         elem.addEventListener('click', (function(catCopy) {
           return function() {
             octopus.setCurrentCat(catCopy);
             catView.render();
+
           };
         })(cat));
 
