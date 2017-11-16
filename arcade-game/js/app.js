@@ -102,7 +102,7 @@ var Gem = function(x, y) {
 	this.y = y;
 	this.width = 50
 	this.height = 75;
-	this.sprite = "images/Gem Orange.png";
+	this.sprite = "images/Gem-orange.png";
 }
 
 var gem = new Gem(getRandomNum(), 40);
@@ -140,20 +140,20 @@ Player.prototype.checkWinning = function() {
 	if ((this.x < gem.x + gem.width && this.x + this.width > gem.x) && (this.y < gem.y + gem.height && this.y + this.height > gem.y)) {
 		this.score += 1;
 		if ((this.score === 1) || (this.score === 6) || (this.score === 11) || (this.score === 16)) {
-			$('#gem1').replaceWith('<img src="images/Gem Orange.png">');
+			$('#gem1').replaceWith('<img src="images/Gem-orange.png">');
 
 		}
 		if ((this.score === 2) || (this.score === 7) || (this.score === 12) || (this.score === 17)) {
-			$('#gem2').replaceWith('<img src="images/Gem Orange.png">');
+			$('#gem2').replaceWith('<img src="images/Gem-orange.png">');
 		}
 		if ((this.score === 3) || (this.score === 8) || (this.score === 13) || (this.score === 18)) {
-			$('#gem3').replaceWith('<img src="images/Gem Orange.png">');
+			$('#gem3').replaceWith('<img src="images/Gem-orange.png">');
 		}
 		if ((this.score === 4) || (this.score === 9) || (this.score === 14) || (this.score === 19)) {
-			$('#gem4').replaceWith('<img src="images/Gem Orange.png">');
+			$('#gem4').replaceWith('<img src="images/Gem-orange.png">');
 		}
 		if ((this.score === 5) || (this.score === 10) || (this.score === 15) || (this.score === 20)) {
-			$('#gem5').replaceWith('<img src="images/Gem Orange.png">');
+			$('#gem5').replaceWith('<img src="images/Gem-orange.png">');
 		}
 		console.log(this.score);
 		if ((this.score === 5) || (this.score === 10) || (this.score === 15) || (this.score === 20)) {
@@ -165,7 +165,7 @@ Player.prototype.checkWinning = function() {
 			console.log(enemy1);
 		}
     // The gray gem images
-		var grayGems = '<img src="images/Gem Orange-gray.png"id="gem1"><img src="images/Gem Orange-gray.png"id="gem2"><img src="images/Gem Orange-gray.png"id="gem3"><img src="images/Gem Orange-gray.png"id="gem4"><img src="images/Gem Orange-gray.png"id="gem5">';
+		var grayGems = '<img src="images/Gem-orange-gray.png"id="gem1"><img src="images/Gem-orange-gray.png"id="gem2"><img src="images/Gem-orange-gray.png"id="gem3"><img src="images/Gem-orange-gray.png"id="gem4"><img src="images/Gem-orange-gray.png"id="gem5">';
 
 		if ((this.level === 2) && (this.score === 5)) {
 			$('#boy').replaceWith('<img src="images/char-boy.png">')

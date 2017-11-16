@@ -9,10 +9,10 @@ var bio = {
     "contacts": {
         "mobile": "+12016582233",
         "email": " nataliecyreus@gmail.com",
-        "github": " @NatalieCyreus",
-        "twitter": " @CyreusNatalie",
+        "github": "github/",
+        "twitter": "twitter",
         "location": " New York, NY US",
-        "linkedIn" : " /natalie-cyreus"
+        "linkedIn" : " linkedIn/"
     },
     "skills": ["HTML", "CSS", "JavaScript"],
     "biopic": "images/natalie.jpg",
@@ -44,7 +44,7 @@ var bio = {
         $(".navbar").prepend(formattedName);
         $(".menu").append(HTMLHeaderMenu);
         $(".hamburger").append(HTMLhamburgerMenu);
-        $(".navbar").append(formattedImage);
+        $(".navbar").prepend(formattedImage);
 
 
 
@@ -105,7 +105,7 @@ var projects = {
             "link": "http://thecookingswede.com/",
             "dates": "june 2017",
             "description": "I use this project to improve my front-end, photography and cooking skills!",
-            "images": ["images/burger.jpg"]
+            "images": ["images/thecookingSwedeProject.jpg"]
         }
         /*,
         {

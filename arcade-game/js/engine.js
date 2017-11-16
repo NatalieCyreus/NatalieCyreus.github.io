@@ -28,7 +28,7 @@ var Engine = (function(global) {
 
     canvas.width = 505;
     canvas.height = 726;
-    projects.prepend(canvas);
+    projectGame.prepend(canvas);
 
     /* This function serves as the kickoff point for the game loop itself
      * and handles properly calling the update and render methods.
@@ -181,9 +181,9 @@ var Engine = (function(global) {
         'images/grass-block.png',
         'images/enemy-bug.png',
         'images/Star.png',
-        'images/Gem green.png',
-        'images/Gem Orange.png',
-        'images/Gem Blue.png',
+        'images/Gem-green.png',
+        'images/Gem-orange.png',
+        'images/Gem-blue.png',
         'images/char-horn-girl.png',
         'images/char-boy.png',
         'images/char-cat-girl.png',

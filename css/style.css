@@ -1,7 +1,15 @@
 
 #bG {
-background-color: #282c34;
-color:#ABB2BF;
+/*background-color: #282c34;*/
+background: url(https://static.pexels.com/photos/373076/pexels-photo-373076.jpeg) no-repeat center center fixed;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}
+
+.pink {
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
   .line1, .line2, .line3 {
@@ -16,20 +24,19 @@ color:#ABB2BF;
   transition: all .3s;
 }
 
-.tab-pane {
-  color:#E26B6D;
-}
 img {
   border-radius: 5px;
 }
 
   .navbar {
-    background: #21252b;
+    /*background: #21252b;*/
+background-color: rgba(255, 255, 255, 0.8);
     height: 100%;
   }
 
+
   button {
-    background-color: #21252b;
+    background-color: #fff;
     border-color: #000;
   }
 
@@ -93,14 +100,20 @@ img {
 
 p {
   line-height: normal;
-  color: #98C379;
+  /*color: #98C379;*/
   font-size: 16px;
   max-width: 550px;
 }
 
+a h5, a h4{
+  color: #000;
+}
+
+
+
 a {
   font-size: 16px;
-  color:#C775DF;
+  color: #000;
 }
 
 ul  {
@@ -109,11 +122,16 @@ ul  {
     padding-bottom: 0px;
   }
 
+
+  .flex-item {
+    display: inline;
+  }
   .bioPic {
     float: left;
     padding: 10px;
     width: 200px;
     display: none;
+    border-radius: 50%;
   }
 
   .hamburger {
@@ -129,7 +147,7 @@ ul  {
   @media only screen and (max-width: 767px) {
 
     .navbar-fixed-top {
-      height: 70px;
+      height: 90px;
     }
     h1 {
       font-size: 16px;
@@ -155,7 +173,7 @@ ul  {
 
       .open {
         height: 200px;
-        background-color: #21252b;
+        background-color: #fff;
         padding-left: 20px;
         margin-top: 8px;
         margin-left: -20px;
@@ -168,18 +186,20 @@ ul  {
       margin-bottom: 15px;
     }
 
+    .flex-item {
+      display: block;
+    }
+
     #name {
       font-size: 10px;
       line-height: normal;
-
     }
 
   }
 
 
   @media only screen and (min-width: 768px) {
-    #skills-h3,
     .bioPic {
-      display: block;
+      display: inline;
     }
   }
