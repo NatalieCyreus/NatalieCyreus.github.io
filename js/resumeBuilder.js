@@ -9,10 +9,10 @@ var bio = {
     "contacts": {
         "mobile": "+12016582233",
         "email": " nataliecyreus@gmail.com",
-        "github": "github/",
-        "twitter": "twitter",
+        "github": "Github/",
+        "twitter": "Twitter",
         "location": " New York, NY US",
-        "linkedIn" : " linkedIn/"
+        "linkedIn" : " LinkedIn/"
     },
     "skills": ["HTML", "CSS", "JavaScript"],
     "biopic": "images/natalie.jpg",
@@ -61,8 +61,8 @@ var work = {
             title: "Co-founder",
             location: "Stockholm, Sweden",
             dates: "2015-2017 ",
-            description: "Tech and marketing driven b2b company focused in creating, storing and sharing augmented reality content.",
-            workpic: "images/spinviewVr.jpg"
+            description: "Tech and marketing driven b2b company focused in creating, storing and sharing augmented reality content. I managed the technical team, working close together to create beatuiful virtul tours for each platform. I was working with layout, photography, customer contact and technical issues. I also did sales, project managing, photography, while finding solutions how to scale and increase the production time and cuality.",
+            workpic: ""
 
         }
     ],

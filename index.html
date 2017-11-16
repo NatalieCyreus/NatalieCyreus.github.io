@@ -8,8 +8,7 @@
 		<meta name="author" content="Natalie Cyreus">
 		<link async href="css/style.css" rel="stylesheet">
 		<meta name="viewport" content="width=device-width,initial-scale=1">
-		<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Old+Standard+TT|Oswald" rel="stylesheet">		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	</head>
@@ -41,9 +40,8 @@
 							<div id="aboutTab" class="tab-pane fade in active">
 								<div class="row">
 									<div class="col-sm-12">
-										<h2>about {</h2>
 											<div class="col-sm-4">
-												<h4>languages</h4>
+												<h4 class="h4text">languages</h4>
 												<ul>
 													<li><p>JavaScript</p></li>
 													<li><p>Css</p></li>
@@ -51,16 +49,15 @@
 												</ul>
 											</div>
 										<div class="col-sm-4">
-											<h4>code knowledge</h4>
+											<h4 class="h4text">code knowledge</h4>
 											<ul>
 												<li><p>jQuery, Bootstrap</p></li>
 												<li><p>MVC frameworks</p></li>
 												<li><p>Wordpress</p></li>
 											</ul>
 										</div>
-
 										<div class="col-sm-4">
-											<h4>tools</h4>
+											<h4 class="h4text">tools</h4>
 											<ul>
 												<li><p>Atom</p></li>
 												<li><p>Github</p></li>
@@ -70,73 +67,44 @@
 										</div>
 									</div>
 								</div>
-								<div class="row">
-									<div class="col-sm-12">
-										<h2>}</h2>
-									</div>
-								</div>
 						  </div>
 							<div id="projectTab" class="tab-pane fade">
 								<div class="row">
 									<div class="col-sm-12">
-										<h2>projects {</h2>
-										<div class="col-sm-1"></div>
-										<div class="col-sm-11" id="projects">
-											<div class="col-sm-12" id="projectGame"></div>
-											<a><h4>Arcade Game<hr></h4></a>
+										<div class="col-sm-12" id="projects">
+											<a><h4>Arcade Game</h4></a>
+											<div class="col-sm-12" id="projectGame"><hr></div>
 											<br>
-											<a><h4>Cat Clicker project <hr></h4></a>
-											<p>about: This was a small project in the Changing expectations course, focused to learn how to write well-structured code. How to write good code for when projects grow. Klick on the kitten image to count, or on the other kitten bittons to view more!</p>
-											<ul id="catButtons">
-											</ul>
+											<a><h4>Cat Clicker project</h4></a>
 											<div id="cat">
-
-												<div class="col-sm-12">
-													<div class="col-xs-4">
-													<h2 id="clicks"></h2>
-												</div>
-													<div class="col-xs-4">
-														<h2 id="kittenName"></h2>
-													</div>
-												</div>
-												<div class="col-sm-12"> <img class="img-responsive" id="catImg" src="" alt="cute cat"><br></div>
+												<img id="catImg" src="" alt="cute cat">
+												<ul id="catButtons">
+												</ul>
+												<h3 class="oswald"id="clicks"></h3>
+													<h5 class="oswald" id="kittenName"></h5>
 											</div>
-
-										</div>
-										<div class="row">
-											<div class="col-sm-12">
-												<h2>}</h2>
-											</div>
+											<p>This was a small project in the Changing expectations course, focused to learn how to write well-structured code. How to write good code for when projects grow. Klick on the kitten image to count, or on the other kitten bittons to view more!</p>
+											<hr>
 										</div>
 								</div>
-
 							</div>
 						</div>
 					  <div id="workTab" class="tab-pane fade">
 							<div class="row">
 								<div class="col-sm-12">
-									<h2>workExperience {</h2>
-									<div class="col-sm-1"></div>
-									<div class="col-sm-11" id="workExperience"></div>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-sm-12">
-									<h2>}</h2>
+									<div class="col-sm-12" id="workExperience"></div>
+									<iframe src="http://spinview.se/360/hotel-diplomat/executive.html" height="500" width="600"></iframe>
+									<iframe src="http://www.spinview.se/360/lilian/v2/" height="500" width="600"></iframe>
+									<iframe src="http://www.spinview.se/360/synsam/v2/?s=pano41" height="500" width="600"></iframe>
+									<hr>
 								</div>
 							</div>
 					  </div>
 					  <div id="educationTab" class="tab-pane fade">
 							<div class="row">
 								<div class="col-sm-12">
-									<h2>education {</h2>
 									<div class="col-sm-1"></div>
 									<div class="col-sm-11" id="education"></div>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-sm-12">
-									<h2>}</h2>
 								</div>
 							</div>
 					  </div>
@@ -144,14 +112,8 @@
 						<div id="volunteeringTab" class="tab-pane fade">
 							<div class="row">
 								<div class="col-sm-12">
-									<h2>volunteering {</h2>
 									<div class="col-sm-1"></div>
 									<div class="col-sm-11" id="volunteering"></div>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-sm-12">
-									<h2>}</h2>
 								</div>
 							</div>
 						</div>

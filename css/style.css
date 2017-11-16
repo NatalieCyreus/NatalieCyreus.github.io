@@ -1,20 +1,19 @@
 
 #bG {
 /*background-color: #282c34;*/
-background: url(https://static.pexels.com/photos/373076/pexels-photo-373076.jpeg) no-repeat center center fixed;
+background: url(https://static.pexels.com/photos/139259/pexels-photo-139259.jpeg) no-repeat center center fixed;
 -webkit-background-size: cover;
 -moz-background-size: cover;
 -o-background-size: cover;
 background-size: cover;
+text-align: right;
+  font-family: 'Oswald', sans-serif;
 }
 
-.pink {
-  background-color: rgba(255, 255, 255, 0.8);
-}
 
   .line1, .line2, .line3 {
   margin-top:5px;
-  background-color:#E26B6D;
+  background-color:#000;
   width:25px;
   height:3px;
   display:block;
@@ -26,11 +25,12 @@ background-size: cover;
 
 img {
   border-radius: 5px;
+  max-width: 100%;
 }
 
+
+
   .navbar {
-    /*background: #21252b;*/
-background-color: rgba(255, 255, 255, 0.8);
     height: 100%;
   }
 
@@ -55,18 +55,9 @@ background-color: rgba(255, 255, 255, 0.8);
     text-align: right;
   }
 
-  h2 {
-    color: #E26B6D;
-    margin: 0px;
-  }
-
-.skills {
-      color: #D19A66;
-      letter-spacing: 2.5px;
-      margin: 0px;
-  }
-
-
+iframe {
+  max-width: 100%;
+}
   .contact-text {
       font-size: 14px;
       color: #98C379;
@@ -77,13 +68,10 @@ background-color: rgba(255, 255, 255, 0.8);
       line-height: 2.5;
   }
 
-  h3 {
-    color: #ABB2BF;
-  }
-
-
   #name {
-    color: #ABB2BF;
+    /*color: #ABB2BF;*/
+    color: #fff;
+    margin-left: 37px;
   }
 
   #titleHeader {
@@ -100,13 +88,21 @@ background-color: rgba(255, 255, 255, 0.8);
 
 p {
   line-height: normal;
-  /*color: #98C379;*/
   font-size: 16px;
-  max-width: 550px;
+  font-family: 'Old Standard TT', serif;
 }
 
-a h5, a h4{
+a h5, a h4 {
   color: #000;
+  font-family: 'Oswald', sans-serif;
+}
+.h4text{
+  color: #000;
+  font-family: 'Oswald', sans-serif;
+}
+
+.oswald {
+  font-family: 'Oswald', sans-serif;
 }
 
 
@@ -118,13 +114,11 @@ a {
 
 ul  {
     list-style-type: none;
-    padding-left: 0px;
-    padding-bottom: 0px;
   }
-
-
   .flex-item {
     display: inline;
+    color: #000;
+    font-family: 'Oswald', sans-serif;
   }
   .bioPic {
     float: left;
@@ -142,15 +136,25 @@ ul  {
     .bioPic {
       display: none;
     }
+    #projectGame {
+        display: none;
+    }
   }
 
   @media only screen and (max-width: 767px) {
 
     .navbar-fixed-top {
       height: 90px;
+      background-color: rgba(255, 255, 255, 1);
+      text-align: left;
     }
     h1 {
       font-size: 16px;
+    }
+
+    iframe {
+      max-width: 100%;
+      height: 300px;
     }
 
     .container {
@@ -193,6 +197,8 @@ ul  {
     #name {
       font-size: 10px;
       line-height: normal;
+      color: #000;
+      margin-left: 0px;
     }
 
   }
@@ -202,4 +208,12 @@ ul  {
     .bioPic {
       display: inline;
     }
+    .navbar-fixed-top {
+      text-align: left;
+      color: #fff;
+      max-width: 300px;
+      }
+.flex-item {
+  color: #fff;
+}
   }

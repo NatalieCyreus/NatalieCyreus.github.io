@@ -94,7 +94,7 @@ var buttonView = {
 
         cat = cats[i];
         elem = document.createElement('button');
-        elem.textContent = cat.name;
+        elem.textContent = cat.name ;
 
 
 
