@@ -1,11 +1,11 @@
 // Score and level board
 var Score = function() {
-	ctx.clearRect(1, 810, 600, 300);
-	ctx.font = "20px Arial";
+	ctx.clearRect(1, 405, 300, 150);
+	ctx.font = "13px Arial";
 	ctx.fillStyle = "white";
 	ctx.textAlign = "left";
-	ctx.fillText("Score " + player.score, 5, 650);
-	ctx.fillText("Level " + player.level, 110, 650);
+	ctx.fillText("Score " + player.score, 2, 325);
+	ctx.fillText("Level " + player.level, 55, 325);
 }
 
 // Enemies our player must avoid
@@ -16,8 +16,8 @@ var Enemy = function(x, y, speed) {
 
 	this.x = x;
 	this.y = y;
-	this.width = 75;
-	this.height = 50;
+	this.width = 37;
+	this.height = 25;
 	this.speed = speed;
 	// Variables applied to each of our instances go here,
 	// we've provided one for you to get started
@@ -34,8 +34,8 @@ Enemy.prototype.update = function(dt) {
 	// which will ensure the game runs at the same speed for
 	// all computers.
 	this.x += this.speed * dt;
-	if (this.x > 500) {
-		this.x = -50;
+	if (this.x > 250) {
+		this.x = -25;
 	}
 };
 
@@ -54,8 +54,8 @@ Enemy.prototype.render = function() {
 var Player = function(x, y) {
 	this.x = x;
 	this.y = y;
-	this.width = 50;
-	this.height = 75;
+	this.width = 25;
+	this.height = 37;
 	this.sprite = 'images/char-horn-girl.png';
 	this.score = 0;
 	this.level = 1;
@@ -63,8 +63,8 @@ var Player = function(x, y) {
 };
 
 Player.prototype.reset = function() {
-	this.y = 400;
-	this.x = 200;
+	this.y = 200;
+	this.x = 100;
 };
 
 
@@ -72,14 +72,14 @@ Player.prototype.reset = function() {
 // Place all enemy objects in an array called allEnemies
 // Place the player object in a variable called player
 
-var enemy1 = new Enemy(-360, 140, 100);
-var enemy2 = new Enemy(-80, 140, 100);
-var enemy3 = new Enemy(-300, 230, 100);
-var enemy4 = new Enemy(-50, 310, 100);
+var enemy1 = new Enemy(-140, 70, 70);
+var enemy2 = new Enemy(-40, 70, 70);
+var enemy3 = new Enemy(-150, 115, 50);
+var enemy4 = new Enemy(-25, 160, 50);
 
 var allEnemies = [enemy1, enemy2, enemy3, enemy4];
 
-var player = new Player(200, 400);
+var player = new Player(100, 200);
 
 player.update = function(dt) {
 	this.checkCollisions();
@@ -94,21 +94,21 @@ Player.prototype.render = function() {
 //The gem class
 
 function getRandomNum() {
-	return Math.floor((Math.random() * 450) + 1);
+	return Math.floor((Math.random() * 225) + 1);
 };
 
 var Gem = function(x, y) {
 	this.x = x;
 	this.y = y;
-	this.width = 50
-	this.height = 75;
+	this.width = 25
+	this.height = 37;
 	this.sprite = "images/Gem-orange.png";
 }
 
-var gem = new Gem(getRandomNum(), 40);
+var gem = new Gem(getRandomNum(), 20);
 
 Gem.prototype.reset = function() {
-	this.y = 40;
+	this.y = 20;
 	this.x = getRandomNum();
 };
 
@@ -125,7 +125,7 @@ Player.prototype.checkCollisions = function() {
   var allEnemiesLength = allEnemies.length;
 	for (var i = 0; i < allEnemiesLength ; i++) {
 
-		if ((this.x < allEnemies[i].x + allEnemies[i].width && this.x + this.width > allEnemies[i].x) && (this.y < allEnemies[i].y + allEnemies[i].height && this.y + this.height > allEnemies[i].y) && (this.y > 100)) {
+		if ((this.x < allEnemies[i].x + allEnemies[i].width && this.x + this.width > allEnemies[i].x) && (this.y < allEnemies[i].y + allEnemies[i].height && this.y + this.height > allEnemies[i].y) && (this.y > 50)) {
 			console.log("Collision!");
 			gem.x = getRandomNum();
 			this.reset();
@@ -158,10 +158,10 @@ Player.prototype.checkWinning = function() {
 		console.log(this.score);
 		if ((this.score === 5) || (this.score === 10) || (this.score === 15) || (this.score === 20)) {
 			this.level += 1;
-			enemy1.speed += 30;
-			enemy2.speed += 30;
-			enemy3.speed += 40;
-			enemy4.speed += 30;
+			enemy1.speed += 15;
+			enemy2.speed += 15;
+			enemy3.speed += 20;
+			enemy4.speed += 15;
 			console.log(enemy1);
 		}
     // The gray gem images
@@ -226,17 +226,17 @@ function winnerText() {
 //position plus size . make a foor lopp to go through each enemy and see the position.
 
 player.handleInput = function(direction) {
-	if (direction === 'left' && this.x >= 100) {
-		this.x -= 100;
+	if (direction === 'left' && this.x >= 50) {
+		this.x -= 50;
 	}
-	if (direction === 'up' && this.y >= 30) {
-		this.y -= 80;
+	if (direction === 'up' && this.y >= 15) {
+		this.y -= 40;
 	}
-	if (direction === 'right' && this.x <= 305) {
-		this.x += 100;
+	if (direction === 'right' && this.x <= 152) {
+		this.x += 50;
 	}
-	if (direction === 'down' && this.y <= 350) {
-		this.y += 80;
+	if (direction === 'down' && this.y <= 175) {
+		this.y += 40;
 	}
 }
 

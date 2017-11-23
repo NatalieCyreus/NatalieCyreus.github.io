@@ -2,6 +2,7 @@
 $('.hamburger').on('click', function(){
       $('.menu').toggleClass('open');
   });
+
 /***************************** BIO SECTION ******************************/
 var bio = {
     "name": "Natalie Serruya-Cyreus",
@@ -9,13 +10,13 @@ var bio = {
     "contacts": {
         "mobile": "+12016582233",
         "email": " nataliecyreus@gmail.com",
-        "github": "Github/",
-        "twitter": "Twitter",
-        "location": " New York, NY US",
-        "linkedIn" : " LinkedIn/"
+        "github": "",
+        "twitter": "",
+        "location": "",
+        "linkedIn" : ""
     },
     "skills": ["HTML", "CSS", "JavaScript"],
-    "biopic": "images/natalie.jpg",
+    "biopic": "",
 
     display: function() {
       /*
@@ -37,19 +38,21 @@ var bio = {
         var formattedLinkedIn = HTMLlinkedIn.replace("%data%", bio.contacts.linkedIn);
 
         var HTMLhamburgerMenu = '<div href="#" class="hamburger"><span class="line1"></span><span class="line2"></span><span class="line3"></span></div>';
-        var HTMLHeaderMenu = formattedLocation + formattedLinkedIn + formattedGithub  + formattedTwitter + formattedEmail ;
+        var HTMLFooterMenu =  formattedEmail ;
+        var FooterSocial = formattedLinkedIn + formattedGithub  + formattedTwitter;
+        var resumeMenu =  '<ul class="nav nav-tabs navbar-static-top"><li class="active"><a data-toggle="tab" href="#aboutTab"><h4>about</h4></a></li><li><a data-toggle="tab" href="#projectTab"><h4>projects</h4></a></li><li><a data-toggle="tab" href="#educationTab"><h4>education</h4></a></li><li><a data-toggle="tab" href="#workTab"><h4>work</h4></a></li><li><a data-toggle="tab" href="#volunteeringTab"><h4>volunteering</h4></a></li></ul>'
 
-
-        $(".menu").prepend(formattedRole);
+        $(".footerContent").prepend(HTMLFooterMenu);
+        $(".footerContent").prepend(formattedRole);
+        $(".footerContent").prepend(FooterSocial);
         $(".navbar").prepend(formattedName);
-        $(".menu").append(HTMLHeaderMenu);
+        $(".menu").append(resumeMenu);
         $(".hamburger").append(HTMLhamburgerMenu);
         $(".navbar").prepend(formattedImage);
 
 
 
-    }
-};
+    } };
 
 bio.display();
 
@@ -61,7 +64,7 @@ var work = {
             title: "Co-founder",
             location: "Stockholm, Sweden",
             dates: "2015-2017 ",
-            description: "Tech and marketing driven b2b company focused in creating, storing and sharing augmented reality content. I managed the technical team, working close together to create beatuiful virtul tours for each platform. I was working with layout, photography, customer contact and technical issues. I also did sales, project managing, photography, while finding solutions how to scale and increase the production time and cuality.",
+            description: "Tech and marketing b2b company focused on creating, storing and sharing augmented reality content. I managed the technical team, working together to create responsive virtual tours. I was working with layout, photography, customer contact, and technical issues. I also did sales, project managing, photography, while finding solutions how to scale and increase the production time and quality.",
             workpic: ""
 
         }
@@ -105,7 +108,7 @@ var projects = {
             "link": "http://thecookingswede.com/",
             "dates": "june 2017",
             "description": "I use this project to improve my front-end, photography and cooking skills!",
-            "images": ["images/thecookingSwedeProject.jpg"]
+            "images": ["images/thecookingSwede.png"]
         }
         /*,
         {
@@ -120,23 +123,27 @@ var projects = {
 
     // Encapsulation - holding the display function inside the "projects" object.
     display: function() {
+
         for (var y = 0; y < projects.projects.length; y++) {
             $("#projects").append(HTMLprojectStart);
 
             var formattedProjectTitle = HTMLprojectTitle.replace("%data%", projects.projects[y].title);
             var formattedProjectTitleLink = formattedProjectTitle.replace("%#%", projects.projects[y].link);
             $(".project-entry:last").append(formattedProjectTitleLink);
+            for (var x = 0; x < projects.projects[y].images.length; x++) {
 
-            formattedProjectDates = HTMLprojectDates.replace("%data%", projects.projects[y].dates);
-            $(".project-entry:last").append(formattedProjectDates);
+                formattedProjectImage = HTMLprojectImage.replace("%data%", projects.projects[y].images[x]);
+                var formattedProjectImageLink = formattedProjectImage.replace("%link%", projects.projects[y].link);
+                $(".project-entry:last").append(formattedProjectImageLink);
+            }
+
+            //formattedProjectDates = HTMLprojectDates.replace("%data%", projects.projects[y].dates);
+            //$(".project-entry:last").append(formattedProjectDates);
 
             formattedProjectDescription = HTMLprojectDescription.replace("%data%", projects.projects[y].description);
             $(".project-entry:last").append(formattedProjectDescription);
 
-            for (var x = 0; x < projects.projects[y].images.length; x++) {
-                var formattedProjectImage = HTMLprojectImage.replace("%data%", projects.projects[y].images[x]);
-                $(".project-entry:last").append(formattedProjectImage);
-            }
+
         }
     }
 };
@@ -220,13 +227,13 @@ var volunteering = {
             "title": "Leader Red Cross",
             "dates": "2014-2015",
             "role": "Red Cross",
-            "description": "A language school for new arrived to Sweden. I re-opened and developed a meeting area in Flemingsberg with the goal to welcome and educate new arrived to learn about Swedish society and language."
+            "description": "A language school for newly arrived to Sweden. I re-opened and developed a meeting area in Flemingsberg, a socioeconomically exposed area. We had weekly meeting teaching swedish and about Sweden."
         },
         {
             "title": "Board member Red Cross Flemingsberg",
             "dates": "2014-2015",
             "role": "Red Cross",
-            "description": "Boardmember of the Flemingsberg division, as one of the most active members of the board I contributed with much knowledge of the needs from the language meetings."
+            "description": "Board member of the Flemingsberg division."
         }
     ],
 
