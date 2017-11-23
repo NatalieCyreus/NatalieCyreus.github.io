@@ -10,47 +10,43 @@ var Cats = function(){
     this.count = 0;
   };
 
-    for (var i = 1; i <= 5; i++) {
-      var imageName = 'kitten' + i;
-      object = new Cat (imageName,imageName);
-      catsArray.push(object);
-    }
-    return catsArray;
+  for (var i = 1; i <= 5; i++) {
+    var imageName = 'kitten' + i;
+    object = new Cat (imageName,imageName);
+    catsArray.push(object);
   }
-
+  return catsArray;
+}
 
 var model = {
     currentCat : null,
     cats : Cats(),
-
 };
 
 var octopus = {
-    init: function() {
-      model.currentCat = model.cats[0];
-      buttonView.init();
-      catView.init();
-    },
+  init: function() {
+    model.currentCat = model.cats[0];
+    buttonView.init();
+    catView.init();
+  },
+  getCurrentCat: function() {
+    return model.currentCat;
+  },
+  //returns the catsArray
+  getCats: function() {
+    return model.cats;
+  },
 
-    getCurrentCat: function() {
-      return model.currentCat;
-    },
+  // set the currently-selected cat to the object passed in
+  setCurrentCat: function(cat){
+    model.currentCat = cat;
+  },
 
-    //returns the catsArray
-    getCats: function() {
-      return model.cats;
-    },
-
-    // set the currently-selected cat to the object passed in
-    setCurrentCat: function(cat){
-      model.currentCat = cat;
-    },
-
-    // increments the counter for the currently-selected cat
-    incrementCounter : function() {
-      model.currentCat.count++;
-      catView.render();
-    }
+  // increments the counter for the currently-selected cat
+  incrementCounter : function() {
+    model.currentCat.count++;
+    catView.render();
+  }
 };
 
 var catView = {
@@ -75,41 +71,32 @@ var catView = {
     this.catNameElem.textContent = currentCat.name;
     this.catImageElem.src = currentCat.img;
   }
-
 };
 
 
 var buttonView = {
+  init : function() {
+    this.buttonElem = document.getElementById('catButtons');
+    this.render();
+  },
+  render: function() {
+    var cat, elem, i;
+    var cats = octopus.getCats();
+    this.buttonElem.innerHTML = '';
 
-    init : function() {
-      this.buttonElem = document.getElementById('catButtons');
-      this.render();
-    },
-    render: function() {
-      var cat, elem, i;
-      var cats = octopus.getCats();
-      this.buttonElem.innerHTML = '';
-
-      for (i = 0; i < cats.length; i++){
-
-        cat = cats[i];
-        elem = document.createElement('button');
-        elem.textContent = cat.name ;
-
-
-
-        elem.addEventListener('click', (function(catCopy) {
-          return function() {
-            octopus.setCurrentCat(catCopy);
-            catView.render();
-
-          };
-        })(cat));
-
-        this.buttonElem.appendChild(elem);
-      }
+    for (i = 0; i < cats.length; i++){
+      cat = cats[i];
+      elem = document.createElement('button');
+      elem.textContent = cat.name ;
+      elem.addEventListener('click', (function(catCopy) {
+        return function() {
+          octopus.setCurrentCat(catCopy);
+          catView.render();
+        };
+      })(cat));
+      this.buttonElem.appendChild(elem);
     }
-  };
-
-octopus.init();
+  }
+};
+  octopus.init();
 });
