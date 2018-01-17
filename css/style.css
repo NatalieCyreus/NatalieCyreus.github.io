@@ -10,10 +10,6 @@
   text-align: left;
 }
 
-a {
-  color: orange;
-}
-
 img {
   border-radius: 5px;
   max-width: 100%;
@@ -37,7 +33,7 @@ button {
 }
 
 .navbar {
-  background-color: #000;
+  background-color: rgb(37,41,46);
 }
 
 .hamburger {
@@ -62,11 +58,11 @@ button {
 }
 
 .nav-tabs{
-  background-color:#000;
+  background-color: rgb(37,41,46);;
 }
 
 .nav-tabs > li > a{
-  background-color: #000 !important;
+  background-color: rgb(37,41,46);!important;
   color: #fff;
 }
 
@@ -77,7 +73,7 @@ button {
 }
 
 ul .nav {
-  border-color: #000;
+  border-color: rgb(37,41,46);;
 }
 
 #name {
